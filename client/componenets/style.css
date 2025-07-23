@@ -336,7 +336,7 @@ body {
 .validation-error {
     text-align: center;
     color: red;
-    font-size: 1.75rem;
+    font-size: 1rem;
     margin: 1rem
 }
 

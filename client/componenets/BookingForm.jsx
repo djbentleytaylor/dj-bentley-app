@@ -46,6 +46,7 @@ const BookingForm = () => {
         inputs.how
     );
     const [showModal, setShowModal] = useState(false);
+    const [formSubmitError, setFormSubmitError] = useState(false)
 
     useEffect(() => {
         console.log("showModal updated:", showModal);
@@ -109,10 +110,11 @@ const BookingForm = () => {
                 },
                 (error) => {
                     console.log(error.text);
+                               setFormSubmitError(true)
                 }
             );
 
-        handleOpenModal();
+        // handleOpenModal();
         console.log(showModal);
 
         console.log("submitted form!");
@@ -245,6 +247,12 @@ const BookingForm = () => {
                         <h3>{requiredFieldError}</h3>
                     </div>
                 )}
+                           {formSubmitError && (
+    <div style={{ padding: "2rem" }}>
+        <h3 style={{ color: "red", textAlign: "center" }}>
+            An error has occurred submitting your request. Please email djbentleytaylor@gmail.com with your request information.
+        </h3>
+    </div>)}
                 <button type="submit" className="btn" disabled={isDisabled}>
                     Submit
                 </button>
