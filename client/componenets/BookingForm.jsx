@@ -21,6 +21,7 @@ const BookingForm = (props) => {
     const isDisabled = !(inputs.user_name && inputs.user_email);
     const hasError = !(inputs.user_name && inputs.user_email);
     const [showModal, setShowModal] = useState(false);
+    const [formSubmitError, setFormSubmitError] = useState(false)
 
     useEffect(() => {
         console.log("showModal updated:", showModal);
@@ -69,10 +70,11 @@ const BookingForm = (props) => {
                 },
                 (error) => {
                     console.log(error.text);
+                    setFormSubmitError(true)
                 }
             );
 
-        handleOpenModal();
+        // handleOpenModal();
         console.log(showModal);
 
         console.log("submitted form!");
@@ -245,6 +247,14 @@ const BookingForm = (props) => {
                         </h3>
                     </div>
                 )}
+                
+               {formSubmitError && (
+    <div style={{ padding: "2rem" }}>
+        <h3 style={{ color: "red", textAlign: "center" }}>
+            An error has occurred submitting your request. Please email djbentleytaylor@gmail.com with your request information.
+        </h3>
+    </div>
+)}
                 <button type="submit" className="btn" disabled={isDisabled}>
                     Submit
                 </button>
