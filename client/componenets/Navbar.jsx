@@ -1,6 +1,6 @@
 import  { useState } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
-import NavBarLogo from "../assets/NavBarLogo.png"
+import NavBarLogo from "../assets/NewLogo.png"
 
 export default function Navbar() {
 
@@ -30,7 +30,7 @@ export default function Navbar() {
                             smooth={true}
                             offset={-70}
                             duration={600}
-                        >Bio</Link>
+                        >About</Link>
                         <Link
                             activeClass="active"
                             className="nav-link"
@@ -39,7 +39,7 @@ export default function Navbar() {
                             smooth={true}
                             offset={-70}
                             duration={600}
-                        >Contact</Link>
+                        >Inquire</Link>
                         <Link
                             activeClass="active"
                             className="nav-link"
@@ -48,7 +48,7 @@ export default function Navbar() {
                             smooth={true}
                             offset={-70}
                             duration={600}
-                        >Awards & Reviews</Link>
+                        >Reviews</Link>
                         <Link
                             activeClass="active"
                             className="nav-link"
@@ -57,7 +57,7 @@ export default function Navbar() {
                             smooth={true}
                             offset={-70}
                             duration={600}
-                        >DJ Mixes</Link>
+                        >Mixes</Link>
                         <Link
                             activeClass="active"
                             className="nav-link"
@@ -121,7 +121,7 @@ export default function Navbar() {
                                 offset={-70}
                                 duration={600}
                                 onClick={() => setToggle(prevToggle => !prevToggle)}
-                            >Awards & Reviews</Link>
+                            >Reviews</Link>
                             <Link
                                 activeClass="active"
                                 className="drop-link"

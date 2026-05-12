@@ -10,14 +10,14 @@ import {
     faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import ClickOutside from "./ClickOutside";
-import photo1 from "../assets/CopyofMoet-Hennessy-3-11-9143.jpg"
+import photo1 from "../assets/firstPhoto.png"
 import photo2 from "../assets/DBBA205D-BC33-4022-AC5D-45AE80FC6BC6.jpeg"
-import photo3 from "../assets/Dj-Bentley-Taylor-8.jpg"
+import photo3 from "../assets/_peppernix2221-3592.jpg"
 import photo4 from "../assets/DSC03286.jpg"
 import photo5 from "../assets/F7B2E57D-BE4F-45B2-9DD0-EF98A062A8A8.jpeg"
 import photo6 from "../assets/Header_Bio_Photo.jpeg"
-import photo7 from "../assets/IMG_2786.jpg"
-import photo8 from "../assets/IMG_5909.jpeg"
+import photo7 from "../assets/peppernix2.jpg"
+import photo8 from "../assets/peppernix3.jpg"
 import photo9 from "../assets/IMG_62712.jpeg"
 import photo10 from "../assets/Moet-Hennessy-3-11-9145.jpg"
 import photo11 from "../assets/Moet-Hennessy-3-18-9135.jpg"
@@ -40,12 +40,12 @@ import photo27 from "../assets/sundance2024.jpg"
 import photo28 from '../assets/terrasse.jpg'
 import photo29 from "../assets/vintageRoom.jpg"
 import photo30 from "../assets/sittingHeadshot.jpg"
-import Navbarlogo from "../assets/NavBarLogo.png"
+import Navbarlogo from "../assets/NewLogo.png"
 
 export default function Gallery() {
 
     const photosArr = [
-        photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12, photo13, photo14, photo15, photo16, photo17, photo18, photo19, photo20, photo21, photo22, photo23, photo24, photo25, photo26, photo27, photo28, photo29, photo30
+        photo1, photo3, photo5, photo6, photo7, photo2, photo8, photo9, photo10, photo13, photo14, photo15, photo16, photo17, photo19, photo21, photo22, photo23, photo25, photo27, photo28, photo29, photo30
     ]
     //
     const [showCarousel, setShowCarousel] = useState(false)

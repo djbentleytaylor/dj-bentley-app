@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from 'react-router-dom';
-import galleryPhoto from "../assets/galleryPhoto.jpeg"
+import NewGalleryPhoto from "../assets/NewGalleryPhoto.jpg"
 
 export default function GalleryImage() {
 
@@ -10,7 +10,7 @@ export default function GalleryImage() {
                 <h1 className="galleryH1">View Gallery</h1>
             </Link>
 
-            <img className="backgroundImage" src={galleryPhoto}></img>
+            <img className="backgroundImage" src={NewGalleryPhoto}></img>
         </div>
     )
 }

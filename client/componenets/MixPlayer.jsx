@@ -88,7 +88,7 @@ const MixPlayer = () => {
 
     return (
         <div className="musicPlayer">
-            <h1>DJ Mixes</h1>
+            <h1>Mixes</h1>
             <div className="carousel">
                 <Slider
                     style={{ display: "flex", alignItems: "center" }}

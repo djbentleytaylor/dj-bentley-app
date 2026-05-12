@@ -1,12 +1,11 @@
-import { useState, useEffect } from "react";
-import emailjs from "@emailjs/browser";
-import FormModal from "./FormModal";
-import DatePicker from "react-datepicker";
+import { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
+import FormModal from './FormModal';
+import DatePicker from 'react-datepicker';
 
 const BookingForm = () => {
     //on my local version, the bio pic doesn't fill entire vertical space
     //first name and last name fields not as wide as the rest of the inputs
-
 
     //
     //submit button too large on mobile
@@ -16,19 +15,19 @@ const BookingForm = () => {
     //first name and last name too narrow on mobile
 
     const [inputs, setInputs] = useState({
-        first_name: "",
-        last_name: "",
-        user_email: "",
-        event_type: "",
-        requested_date: "",
-        event_location: "",
-        event_duration: "",
-        estimated_budget: "",
-        how: "",
-        details: "",
+        first_name: '',
+        last_name: '',
+        user_email: '',
+        event_type: '',
+        requested_date: '',
+        event_location: '',
+        event_duration: '',
+        estimated_budget: '',
+        how: '',
+        details: '',
     });
 
-    const [requiredFieldError, setRequiredFieldError] = useState("");
+    const [requiredFieldError, setRequiredFieldError] = useState('');
     const isDisabled = !(
         inputs.first_name &&
         inputs.last_name &&
@@ -46,10 +45,10 @@ const BookingForm = () => {
         inputs.how
     );
     const [showModal, setShowModal] = useState(false);
-    const [formSubmitError, setFormSubmitError] = useState(false)
+    const [formSubmitError, setFormSubmitError] = useState(false);
 
     useEffect(() => {
-        console.log("showModal updated:", showModal);
+        console.log('showModal updated:', showModal);
     }, [showModal]);
 
     const handleChange = (e) => {
@@ -63,25 +62,24 @@ const BookingForm = () => {
     };
 
     const handleBlur = (e) => {
-
         const { name, value } = e.target;
 
-        if (name === "first_name" && value === "") {
-            setRequiredFieldError("First name is a required field.");
-        } else if (name === "last_name" && value === "") {
-            setRequiredFieldError("Last name is a required field.");
-        } else if (name === "user_email" && value === "") {
-            setRequiredFieldError("Email address is a required field.");
-        } else if (name === "event_type" && value === "") {
-            setRequiredFieldError("Event type is a required field.");
-        } else if (name === "event_date" && value === "") {
-            setRequiredFieldError("Event date is a required field.");
-        } else if (name === "how" && value === "") {
+        if (name === 'first_name' && value === '') {
+            setRequiredFieldError('First name is a required field.');
+        } else if (name === 'last_name' && value === '') {
+            setRequiredFieldError('Last name is a required field.');
+        } else if (name === 'user_email' && value === '') {
+            setRequiredFieldError('Email address is a required field.');
+        } else if (name === 'event_type' && value === '') {
+            setRequiredFieldError('Event type is a required field.');
+        } else if (name === 'event_date' && value === '') {
+            setRequiredFieldError('Event date is a required field.');
+        } else if (name === 'how' && value === '') {
             setRequiredFieldError(
-                "How did you hear about DJ Bentley is a required field."
+                'How did you hear about DJ Bentley is a required field.',
             );
         } else {
-            setRequiredFieldError("");
+            setRequiredFieldError('');
         }
     };
 
@@ -98,10 +96,10 @@ const BookingForm = () => {
 
         emailjs
             .sendForm(
-                "service_dpcvvfo",
-                "template_cnpcy9m",
+                'service_dpcvvfo',
+                'template_cnpcy9m',
                 e.target,
-                "0FMSFkE2DIZ5zpkCX"
+                '0FMSFkE2DIZ5zpkCX',
             )
             .then(
                 (result) => {
@@ -110,25 +108,25 @@ const BookingForm = () => {
                 },
                 (error) => {
                     console.log(error.text);
-                               setFormSubmitError(true)
-                }
+                    setFormSubmitError(true);
+                },
             );
 
         // handleOpenModal();
         console.log(showModal);
 
-        console.log("submitted form!");
+        console.log('submitted form!');
         setInputs({
-            first_name: "",
-            last_name: "",
-            user_email: "",
-            event_type: "",
-            requested_date: "",
-            event_location: "",
-            event_duration: "",
-            estimated_budget: "",
-            how: "",
-            details: "",
+            first_name: '',
+            last_name: '',
+            user_email: '',
+            event_type: '',
+            requested_date: '',
+            event_location: '',
+            event_duration: '',
+            estimated_budget: '',
+            how: '',
+            details: '',
         });
     }
 
@@ -177,8 +175,10 @@ const BookingForm = () => {
                     <option value="">--Event Type *--</option>
 
                     <option value="wedding">Wedding</option>
-                    <option value="corporate event">Corporate event</option>
-                    <option value="private party">Private party</option>
+                    <option value="corporate event">Corporate Event</option>
+                       <option value="all vinyl dj set">All Vinyl DJ Set</option>
+                    <option value="private celebration">Private Celebration</option>
+                         <option value="social event">Social Event</option>
                     <option value="other">Other</option>
                 </select>
                 <DatePicker
@@ -247,12 +247,15 @@ const BookingForm = () => {
                         <h3>{requiredFieldError}</h3>
                     </div>
                 )}
-                           {formSubmitError && (
-    <div style={{ padding: "2rem" }}>
-        <h3 style={{ color: "red", textAlign: "center" }}>
-            An error has occurred submitting your request. Please email djbentleytaylor@gmail.com with your request information.
-        </h3>
-    </div>)}
+                {formSubmitError && (
+                    <div style={{ padding: '2rem' }}>
+                        <h3 style={{ color: 'red', textAlign: 'center' }}>
+                            An error has occurred submitting your request.
+                            Please email djbentleytaylor@gmail.com with your
+                            request information.
+                        </h3>
+                    </div>
+                )}
                 <button type="submit" className="btn" disabled={isDisabled}>
                     Submit
                 </button>

@@ -19,7 +19,7 @@ export default function Main() {
             </div>
             <div className="booking">
                 <div id="bookingForm">
-                    <h1 className="bookH1">Submit Booking Request</h1>
+                    <h1 className="bookH1">Inquire</h1>
                    
                     <div className="details">
                         

@@ -20,7 +20,7 @@ body {
     background-color: #d3d3d3;
     font-family: "montserrat";
     width: 100vw;
-    height: 133px;
+    height: 70px;        /* was 133px */
     position: sticky;
     top: 0;
     z-index: 100;
@@ -46,9 +46,10 @@ body {
 }
 
 .logo {
-    width: 25vw;
+    width: 400px;        /* adjust to taste */
     height: auto;
     margin-left: 3rem;
+    margin-top: .5rem;
 }
 
 .nav-link {
@@ -97,7 +98,7 @@ body {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    background-color: #d3d3d3;
+ background-color: #d3d3d3; 
     margin: 0;
     /* max-height: 80vh; */
     width: 100vw;
@@ -119,23 +120,58 @@ body {
     object-fit: cover;
 }
 
+
+.about-section    { background-color: #f0efea; }
+.aboutBio {
+    background-color: #e8e8e8;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    width: 100%;
+}
+
+.aboutBio h1 {
+    margin-bottom: 1.25rem;
+}
+
+.aboutBio a {
+    text-decoration: none;
+    color: purple;  
+}
+
+.aboutBio a:hover {
+    text-decoration: underline;  
+}
+.aboutBio p {
+    margin-bottom: 1rem;
+    color: inherit;
+}
+
+.aboutBio p:last-child {
+    margin-bottom: 0;
+}
+
+.aboutBio li {
+    margin-bottom: 0.25rem;
+}
+
 .aboutContent {
     height: auto;
     display: flex;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 2rem;        /* replaces padding-top/bottom, adds side breathing room */
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;   /* was center — allows bio card to stretch naturally */
     justify-content: center;
     color: #56575C;
-    background-color: #07080A;
+    width: 50%;                /* constrain to left column on desktop */
 }
 
 .aboutContent>h1 {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    color: #d3d3d3;
-    font-size: 5rem;
+    color: black;
+    font-size: 3rem;
     font-weight: 400;
     font-family: 'Roboto Condensed', sans-serif;
     /* display: none */
@@ -229,13 +265,15 @@ body {
 .name-input {
     display: flex;
     /* flex-wrap: wrap; */
+     gap: 12px;  
     justify-content: space-between;
+      margin-top: 16px;
     width: 40vw;
 }
 
 .input {
     width: 40vw;
-    padding: 5px;
+    padding: 8px 12px;   
     margin-top: 10px;
     flex-shrink: 0;
     border-radius: 5.625rem;
@@ -252,65 +290,45 @@ body {
 .first-name-input,
 .last-name-input {
     flex: 1;
-    margin-top: 10px;
-    /* margin-left: 10px; */
-    /* width: 10vw; */
-    border-radius: 5.625rem;
+    height: 36px;             /* slightly taller */
+    padding: 8px 12px;
+  
+    border-radius: 6px;       /* was 1.25rem */
     background: #e8e8e8;
+    justify-content: space-between;
     color: #56575C;
     font-family: "montserrat";
     border: none;
-    /* transform: translateX(+50%); */
-    height: 28px;
-    width: 40vw;
-    padding: 5px;
-    margin-top: 10px;
-    flex-shrink: 0;
-    border-radius: 1.25rem;
-    background: #e8e8e8;
-    font-family: "montserrat";
-    border: none;
-    /* position: relative;
-    left: 50%;
-    transform: translateX(-50%); */
-    background: #e8e8e8;
+        width: auto !important;  
 }
 
 
 
 .input {
     width: 40vw;
-    padding: 5px;
-    margin-top: 10px;
+    padding: 8px 12px;        /* more padding inside the field */
+    margin-top: 16px;         /* was 10px — more breathing room between fields */
     flex-shrink: 0;
-    border-radius: 1.25rem;
+    border-radius: 6px;       /* was 1.25rem — much smaller radius */
     background: #e8e8e8;
+    color: #56575C;
     font-family: "montserrat";
     border: none;
-    /* position: relative;
-    left: 50%;
-    transform: translateX(-50%); */
-    background: #e8e8e8;
-
 }
 
 .btn {
-    padding: 0 2rem 0 2rem;
+    padding: 0 2rem;
     height: 3rem;
     flex-shrink: 0;
-    border-radius: 5.625rem;
+    border-radius: 6px;       /* match inputs */
     background: #C74A32;
     color: #d3d3d3;
     font-family: "montserrat";
-    margin-top: 10px;
+    margin-top: 20px;         /* more space above button */
     margin-bottom: 10px;
     border: none;
-    /* position: relative;
-    left: 50%;
-    transform: translateX(-50%); */
     display: block;
 }
-
 
 
 .details {
@@ -494,6 +512,15 @@ body {
     background-color: #e8e8e8;
 }
 
+.reviews-awards-container a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.reviews-awards-container a:hover {
+    opacity: 0.75;
+}
+
 .reviews-awards-container>p {
     background-color: #e8e8e8;
     text-align: center;
@@ -506,22 +533,67 @@ body {
     margin: 1rem;
 }
 
+.reviews-card-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    max-width: 1600px;
+    margin: 0 auto 2rem auto;
+    padding: 0 1.5rem;
+    align-items: flex-start;  /* so cards don't stretch to match the tallest */
+}
+
+.reviews-recent-reviews {
+    flex: 1;
+    background-color: #f5f5f2;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+    .reviews-card-grid {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+}
+
 .reviews-sub-header-container {
     background-color: #e8e8e8;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;    /* was center */
     justify-content: center;
+    padding: 0.5rem 2rem;
 }
 
 .reviews-recent-reviews-sub-header {
     background-color: #e8e8e8;
-    margin: 0.5rem
+    margin: 0.5rem 0;           /* remove left/right auto */
+    padding: 0;                 /* remove — handled by parent */
 }
 
-.reviews-recent-reviews>p {
-    background-color: #e8e8e8;
-    margin-bottom: 1rem;
+.reviews-recent-reviews > p {
+    margin-bottom: 0.5rem;
+    padding: 0;               /* remove old padding */
+    background-color: transparent;
+    max-width: 100%;          /* let the card control width now */
+}
+
+.reviews-attribution {
+    background-color: transparent;
+    padding: 0;
+    font-style: italic;
+    color: #555;
+    margin-top: 0.75rem;
+}
+
+.reviews-attribution {
+    background-color: transparent;
+    padding: 0;
+    font-style: italic;
+    color: #555;
+    margin-top: 0.75rem;
 }
 
 .row-of-stars-component {
@@ -877,9 +949,10 @@ body {
         /* Reset transformation */
     }
 
-    .name-input {
-        flex-direction: column;
+     .name-input {
+        flex-direction: row;  /* keep side by side until truly small */
         width: 85vw;
+        gap: 12px;
     }
 
     .details {
@@ -1093,17 +1166,16 @@ body {
 
     /* bio */
 
-    .aboutPage {
-        font-family: "montserrat";
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        background-color: #d3d3d3;
-        margin: 0;
-        /* max-height: 80vh; */
-        width: 100vw;
-    }
-
+.aboutPage {
+    font-family: "montserrat";
+    background-color: #d3d3d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100vw;
+    padding: 2rem;
+}
     .aboutImage {
         max-width: none;
         width: 100vw;
@@ -1120,16 +1192,16 @@ body {
         object-fit: cover;
     }
 
-    .aboutContent {
-        /* min-width:50vw; */
-        height: auto;
-        /* max-height: 80vh; */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: #56575C
-    }
+.aboutContent {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #56575C;
+    width: 100%;
+    max-width: 800px;    /* constrains it so it doesn't stretch full screen width */
+}
 
     .aboutContent>h1 {
         margin-top: 3rem;
