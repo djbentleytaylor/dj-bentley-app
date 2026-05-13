@@ -1134,8 +1134,7 @@ body {
         width: 100%;
         box-sizing: border-box;
         overflow: hidden;
-        height: auto;        /* remove fixed height */
-        min-height: unset;
+      min-height: unset;  
     }
     .aboutPage {
         overflow-x: hidden;
@@ -1148,6 +1147,7 @@ body {
         width: 100vw;
         padding: 1.5rem;
         gap: 1.5rem;
+            max-height: none; 
     }
 
     .aboutImage {
