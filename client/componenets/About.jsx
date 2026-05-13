@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './style.css';
-import bioPhoto from '../assets/AboutPhoto.png';
+import bioPhoto from '../assets/aboutPhoto.png';
 
 const About = () => {
     const [bio, setBio] = useState('');
@@ -25,14 +25,15 @@ const About = () => {
             
 
                 <div className="aboutBio">
-                      <h1>About</h1>
-                    <p style={{ fontWeight: 500, marginBottom: '0.5rem' }}>
+                      <h1 style={{color: '#56575C'}}>About</h1>
+                    <p style={{ fontWeight: 500, marginBottom: '0.5rem', color: '#56575C' }}>
                         Services Offered:
                     </p>
                     <ul
                         style={{
                             marginBottom: '1.5rem',
                             paddingLeft: '1.25rem',
+                            color: '#56575C'
                         }}
                     >
                         <li>
@@ -45,7 +46,7 @@ const About = () => {
                         <li>Social Events</li>
                     </ul>
 
-                    <p>
+                    <p style={{color: '#56575C'}}>
                         Bentley Taylor, better known as DJ Bentley, has been
                         keeping dance floors packed for over 15 years. Known for
                         reading the crowd and creating unforgettable
@@ -55,7 +56,7 @@ const About = () => {
                         after the night ends.
                     </p>
 
-                    <p>
+                    <p style={{color: '#56575C'}}>
                         From luxury weddings and private celebrations to
                         corporate events, après-ski parties, and all-vinyl DJ
                         sets, DJ Bentley brings a versatile and personalized
@@ -65,7 +66,7 @@ const About = () => {
                         engaged from start to finish.
                     </p>
 
-                    <p>
+                    <p style={{color: '#56575C'}}>
                         Be sure to check out his <a href="#reviews">reviews</a>{' '}
                         to hear directly from past clients about their
                         experience.

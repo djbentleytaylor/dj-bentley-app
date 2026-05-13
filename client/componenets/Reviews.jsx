@@ -2,6 +2,8 @@ import './style.css';
 import StarsRow from './StarsRow';
 import the_knot_logo from '../assets/the_knot_logo.png';
 import TK_BOW_2024_Badge from '../assets/TK_BOW_2024_Badge.png';
+import BOW2026 from '../assets/2026BOW.png';
+import BOW25 from '../assets/BOW25.png';
 
 function Reviews() {
     function navigateToTheKnotReviews() {
@@ -16,8 +18,15 @@ function Reviews() {
 
             <div className="reviews-awards-container">
                 <div className="badgeContainer">
-                    <img width={100} src={the_knot_logo} />
+                    <img
+                        width={100}
+                        src="https://www.rockymountainbride.com/wp-content/uploads/2026/01/2026-Badges14.png"
+                        alt="Rocky Mountain Bride Featured Vendor"
+                    />
+                    <img width={100} src={BOW2026} />
+                    <img width={100} src={BOW25} />
                     <img width={100} src={TK_BOW_2024_Badge} />
+                    <img width={100} src={the_knot_logo} />
                 </div>
                 <p>
                     DJ Bentley is proud to be a multi-year winner of{' '}
@@ -25,6 +34,7 @@ function Reviews() {
                         href="https://www.theknot.com/marketplace/dj-bentley-park-city-ut-2064480"
                         target="_blank"
                         rel="noreferrer"
+                        className='reviewsLink'
                     >
                         The Knot
                     </a>{' '}
@@ -35,6 +45,7 @@ function Reviews() {
                         href="https://www.rockymountainbride.com"
                         target="_blank"
                         rel="noreferrer"
+                         className='reviewsLink'
                     >
                         Rocky Mountain Bride
                     </a>{' '}
@@ -47,7 +58,7 @@ function Reviews() {
             <h2 className="reviews-recent-reviews-header">Recent Reviews</h2>
             <div className="reviews-card-grid">
                 <div className="reviews-recent-reviews">
-                    <p>
+                    <p style={{color: '#56575C'}}>
                         Quite frankly, we can’t say enough good things about
                         Bentley and the way he and his team showed up and
                         performed at our wedding. He was exceptionally kind,
@@ -62,7 +73,7 @@ function Reviews() {
                 </div>
 
                 <div className="reviews-recent-reviews">
-                    <p>
+                    <p style={{color: '#56575C'}}>
                         Bentley is one of my favorite DJs I&apos;ve used for my
                         events. His professionalism, good energy, and manners
                         are just the cherry on top of the good music and vibe he
