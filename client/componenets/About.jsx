@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './style.css';
-import bioPhoto from '../assets/aboutPhoto.png';
+import bioPhoto from '../assets/dj-photo.png';
 
 const About = () => {
     const [bio, setBio] = useState('');
