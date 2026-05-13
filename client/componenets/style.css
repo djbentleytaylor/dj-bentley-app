@@ -1058,6 +1058,9 @@ body {
 
 /* Modal */
 @media (max-width: 600px) {
+     html {
+        font-size: 14px;  /* reduce from 20px on mobile */
+    }
     .modal-btn {
         width: 80px;
         height: 40px;
