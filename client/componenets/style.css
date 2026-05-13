@@ -1027,6 +1027,75 @@ body {
     }
 }
 
+@media only screen and (max-width: 900px) {
+
+    /* Global */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* Booking */
+    .bookingLayout {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .bookingImage {
+        width: 100%;
+        height: 40vh;
+        object-fit: cover;
+        position: static;   /* fixes the sticky image issue */
+    }
+
+    .bookingRight {
+        width: 100%;
+    }
+
+    .input,
+    .first-name-input,
+    .last-name-input,
+    .textarea,
+    .btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .name-input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Reviews */
+    .reviews-container {
+        width: 95vw;
+        padding: 1rem;
+    }
+
+    .reviews-card-grid {
+        flex-direction: column;
+        padding: 0 0.5rem;
+        width: 100%;
+    }
+
+    .reviews-recent-reviews {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Gallery */
+    .galleryImage {
+        height: 300px;
+        background-attachment: scroll;  
+    }
+}
+
 @media only screen and (max-width: 800px) {
     .nav-link {
         text-decoration: none;
