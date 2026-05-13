@@ -44,6 +44,25 @@ body {
     transform: translateY(-50%);
 }
 
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #56575C;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
 .logo {
     width: 400px;
     height: auto;
@@ -1035,9 +1054,61 @@ body {
     }
 
     /* Navbar */
-    .navbar {
-        width: 100%;
-        overflow: hidden;
+       .navbar {
+        display: none;
+    }
+
+    .dropdown {
+        display: flex;
+        background-color: #d3d3d3;
+        font-family: "montserrat";
+        width: 100vw;
+        height: 70px;
+        position: sticky;
+        top: 0;
+        align-items: center;
+        z-index: 100;
+    }
+
+     .menuToggle {
+        color: #56575c;
+        font-size: 1.25rem;
+    }
+
+    .drop-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90vw;
+    }
+
+    .dropItems {
+        position: absolute;
+      top: 70px;   
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-shrink: 1;
+        background-color: #d3d3d3;
+    }
+
+    .logo {
+        width: 40vw;
+        height: auto;
+        margin-left: 1rem;
+    }
+
+    .drop-link {
+        text-decoration: none;
+        width: 100vw;
+        text-align: end;
+        color: #56575c;
+        background-color: #d3d3d3;
+        font-size: 1.25rem;
+        padding: 2vh 6vh 2vh 6vh;
+        border-bottom: solid 0.5px #56575c;
     }
 
     /* Booking */
@@ -1072,6 +1143,15 @@ body {
         box-sizing: border-box;
     }
 
+      .react-datepicker-wrapper {
+        width: 100%;
+    }
+
+       .react-datepicker-wrapper input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     /* Reviews */
     .reviews-container {
         width: 95vw;
@@ -1087,12 +1167,21 @@ body {
     .reviews-recent-reviews {
         width: 100%;
         box-sizing: border-box;
+        flex: none;  
     }
 
     /* Gallery */
     .galleryImage {
         height: 300px;
-        background-attachment: scroll;  
+        background-size: cover;
+        background-attachment: scroll;
+        background-position: center;
+    }
+       .galleryH1 {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);  /* centers both axes */
+        width: 50vw;
     }
 }
 
@@ -1117,8 +1206,8 @@ body {
     }
 }
 
-/* Force row on reviews cards above 601px */
-@media (min-width: 601px) {
+/* Force row on reviews cards above 901px */
+@media (min-width: 901px) {
     .reviews-card-grid {
         flex-direction: row;
     }
@@ -1140,6 +1229,10 @@ body {
     }
 
     /* Navbar */
+
+        .navbar {
+        display: none;
+    }
     .dropdown {
         background-color: #d3d3d3;
         font-family: 'montserrat';
