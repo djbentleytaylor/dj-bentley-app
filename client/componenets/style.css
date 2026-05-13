@@ -1135,6 +1135,7 @@ body {
         box-sizing: border-box;
         overflow: hidden;
       min-height: unset;  
+       padding: 1.5rem;  
     }
     .aboutPage {
         overflow-x: hidden;
@@ -1145,7 +1146,7 @@ body {
         align-items: center;
         margin: 0;
         width: 100vw;
-        padding: 1.5rem;
+        padding: 1rem;
         gap: 1.5rem;
             max-height: none; 
     }
@@ -1206,15 +1207,30 @@ body {
     .last-name-input,
     .textarea,
     .btn {
-        width: 85vw;
+         width: 100%;        /* change from 85vw to 100% */
+    box-sizing: border-box;
     }
 
     .input,
     .first-name-input,
     .last-name-input {
-        width: 85vw;
+    width: 100%;    
         transform: translateX(0%);
     }
+
+    .name-input {
+    width: 100%;     
+    box-sizing: border-box;
+}
+
+.react-datepicker-wrapper {
+    width: 100%;
+}
+
+.react-datepicker-wrapper input {
+    width: 100%;
+    box-sizing: border-box;
+}
 
     .details {
         position: static;
