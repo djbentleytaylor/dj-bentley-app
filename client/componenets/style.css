@@ -127,8 +127,7 @@ body {
     font-size: 0.875rem;
     line-height: 1.7;
     width: 100%;
-    height: 65vh;
-}
+   min-height: 65vh; }
 
 .aboutBio h1 {
     margin-bottom: 1.25rem;
