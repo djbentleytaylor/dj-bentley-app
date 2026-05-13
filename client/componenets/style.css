@@ -791,6 +791,25 @@ body {
     color: #56575c;
 }
 
+.footer-copyright {
+    font-size: 1vw;
+    color: #56575c;
+    margin: 0.5vh 0;
+    letter-spacing: 0.05em;
+    margin-top: 5vh;
+      font-family: 'montserrat';
+}
+
+.footer-copyright a {
+    color: #56575c;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer-copyright a:hover {
+    color: #2c2d30;
+}
+
 /* Gallery */
 
 .backgroundImage {
@@ -1507,6 +1526,54 @@ body {
     .footerItems > a > img {
         height: 10vw;
     }
+
+    @media (max-width: 768px) {
+    .footerLogo {
+        width: 60vw;
+    }
+
+    .footerItems {
+        width: 50vw;
+    }
+
+    .footerItems > a {
+        font-size: 7vw;
+        max-height: 12vw;
+    }
+
+    .footerItems > a > img {
+        height: 4vh;
+    }
+
+    .footer-copyright {
+        font-size: 2.5vw;
+        margin: 1vh 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .footerLogo {
+        width: 75vw;
+    }
+
+    .footerItems {
+        width: 70vw;
+    }
+
+    .footerItems > a {
+        font-size: 9vw;
+        max-height: 15vw;
+    }
+
+    .footerItems > a > img {
+        height: 3.5vh;
+    }
+
+    .footer-copyright {
+        font-size: 3.5vw;
+        margin: 1.5vh 0;
+    }
+}
 }
 
 /* Colors */

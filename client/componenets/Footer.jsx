@@ -6,7 +6,11 @@ const Footer = () => {
 
     return (
         <div className="footer-container">
+                   <p className="footer-copyright">
+                &copy; {new Date().getFullYear()} | Designed & Developed by <a href="https://ashleymckellar.com/" target="_blank" rel="noreferrer">Ashley McKellar</a>
+            </p>
             <div className="footerItems">
+            
                 <a href="https://www.instagram.com/djbentleytaylor/" >
                     <FaInstagram />
                 </a>
@@ -18,6 +22,7 @@ const Footer = () => {
                 </a>
             </div>
             <img className="footerLogo" src={DJBENTLEY} ></img>
+          
         </div>
     )
 }
