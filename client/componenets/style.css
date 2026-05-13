@@ -1175,9 +1175,9 @@ body {
     /* Gallery */
     .galleryImage {
         height: 300px;
-        background-size: cover;
         background-attachment: scroll;
-        background-position: center;
+        background-size: cover;
+        background-position: center top;  /* adjust to show the best part of the image */
     }
        .galleryH1 {
         top: 50%;
