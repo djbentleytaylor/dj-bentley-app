@@ -1135,7 +1135,7 @@ body {
         box-sizing: border-box;
         overflow: hidden;
       min-height: unset;  
-       padding: 1.5rem;  
+       padding: 1rem;  
     }
     .aboutPage {
         overflow-x: hidden;
@@ -1146,7 +1146,7 @@ body {
         align-items: center;
         margin: 0;
         width: 100vw;
-        padding: 1rem;
+     padding: 0.5rem; 
         gap: 1.5rem;
             max-height: none; 
     }
