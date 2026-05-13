@@ -10,13 +10,14 @@ html {
 body {
     font-size: 1rem;
     background-color: #d3d3d3;
+        overflow-x: hidden;
 }
 
 /* NavBar */
 
 .navbar {
     background-color: #d3d3d3;
-    font-family: "montserrat";
+    font-family: 'montserrat';
     width: 100vw;
     height: 70px;
     position: sticky;
@@ -47,7 +48,7 @@ body {
     width: 400px;
     height: auto;
     margin-left: 3rem;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
 }
 
 .nav-link {
@@ -60,7 +61,7 @@ body {
 
 .nav-link:hover {
     cursor: pointer;
-    border-bottom: solid 0.5px #56575C;
+    border-bottom: solid 0.5px #56575c;
 }
 
 .dropdown {
@@ -90,7 +91,7 @@ body {
 /* Bio/About */
 
 .aboutPage {
-    font-family: "montserrat";
+    font-family: 'montserrat';
     display: flex;
     flex-direction: row-reverse;
     align-items: stretch;
@@ -127,7 +128,8 @@ body {
     font-size: 0.875rem;
     line-height: 1.7;
     width: 100%;
-   min-height: 65vh; }
+    min-height: 65vh;
+}
 
 .aboutBio h1 {
     margin-bottom: 1.25rem;
@@ -204,7 +206,7 @@ body {
 
 .galleryLink {
     text-decoration: none;
-    color: #56575C;
+    color: #56575c;
 }
 
 .galleryH1 {
@@ -215,30 +217,30 @@ body {
     position: absolute;
     z-index: 3;
     padding: 2rem;
-    font-family: "montserrat";
-    color: #56575C;
+    font-family: 'montserrat';
+    color: #56575c;
     text-align: center;
     font-size: 2rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    background: rgba(240, 239, 238, 0.50);
+    background: rgba(240, 239, 238, 0.5);
     width: 30vw;
 }
 
 /* Booking */
 
 .bookH1 {
-    font-family: "montserrat";
+    font-family: 'montserrat';
     text-align: center;
     padding: 1rem 0;
-    color: #56575C;
+    color: #56575c;
     background-color: transparent;
 }
 
 .bookingBlurb {
-    font-family: "montserrat";
-    color: #56575C;
+    font-family: 'montserrat';
+    color: #56575c;
     text-align: center;
     font-size: 0.85rem;
     line-height: 1.7;
@@ -299,8 +301,8 @@ body {
     flex-shrink: 0;
     border-radius: 6px;
     background: #e8e8e8;
-    color: #56575C;
-    font-family: "montserrat";
+    color: #56575c;
+    font-family: 'montserrat';
     border: none;
 }
 
@@ -312,8 +314,8 @@ body {
     border-radius: 6px;
     background: #e8e8e8;
     justify-content: space-between;
-    color: #56575C;
-    font-family: "montserrat";
+    color: #56575c;
+    font-family: 'montserrat';
     border: none;
     width: auto !important;
 }
@@ -323,9 +325,9 @@ body {
     height: 3rem;
     flex-shrink: 0;
     border-radius: 5.625rem;
-    background: #C74A32;
+    background: #c74a32;
     color: #d3d3d3;
-    font-family: "montserrat";
+    font-family: 'montserrat';
     font-size: 1rem;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -402,8 +404,8 @@ body {
 }
 
 .react-datepicker__day--today {
-    border: 2px solid #C74A32;
-    color: #C74A32;
+    border: 2px solid #c74a32;
+    color: #c74a32;
 }
 
 .react-datepicker__day--disabled {
@@ -440,7 +442,7 @@ body {
 
 .react-datepicker__navigation {
     border: 1px solid #ccc;
-    font-family: "montserrat";
+    font-family: 'montserrat';
     margin: 1rem 1rem 0.5rem 1rem;
 }
 
@@ -460,8 +462,8 @@ body {
 /* Reviews */
 
 .reviews-container {
-    font-family: "montserrat";
-    color: #56575C;
+    font-family: 'montserrat';
+    color: #56575c;
     background-color: #e8e8e8;
     border-radius: 1rem;
     width: 90vw;
@@ -487,7 +489,7 @@ body {
 .reviews-header {
     text-align: center;
     background-color: #e8e8e8;
-    color: #56575C;
+    color: #56575c;
 }
 
 .reviews-awards-container {
@@ -595,9 +597,9 @@ body {
     height: 3rem;
     flex-shrink: 0;
     border-radius: 5.625rem;
-    background: #C74A32;
+    background: #c74a32;
     color: #d3d3d3;
-    font-family: "montserrat";
+    font-family: 'montserrat';
     font-size: 1rem;
     margin-top: 10px;
     border: none;
@@ -626,7 +628,7 @@ body {
 .musicPlayer > h1 {
     text-align: center;
     padding: 3rem;
-    color: #56575C;
+    color: #56575c;
 }
 
 .carousel {
@@ -637,13 +639,13 @@ body {
 }
 
 .custom-prev {
-    color: #56575C;
+    color: #56575c;
     font-size: 3rem;
     width: min-content;
 }
 
 .custom-next {
-    color: #56575C;
+    color: #56575c;
     font-size: 3rem;
     width: min-content;
 }
@@ -702,8 +704,8 @@ body {
     height: 3rem;
     flex-shrink: 0;
     border-radius: 5.625rem;
-    background: #C74A32;
-    font-family: "montserrat";
+    background: #c74a32;
+    font-family: 'montserrat';
     border: none;
     margin: 0 auto;
     color: #d3d3d3;
@@ -712,13 +714,13 @@ body {
 .modal-h2 {
     text-align: center;
     font-family: montserrat;
-    color: #56575C;
+    color: #56575c;
 }
 
 .modal-p {
     text-align: center;
     font-family: montserrat;
-    color: #56575C;
+    color: #56575c;
     font-size: 16px;
 }
 
@@ -756,7 +758,7 @@ body {
 .footerItems > a {
     max-height: 6vw;
     font-size: 3vw;
-    color: #56575C;
+    color: #56575c;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -765,7 +767,7 @@ body {
 
 .footerItems > a > img {
     height: 5vh;
-    color: #56575C;
+    color: #56575c;
 }
 
 /* Gallery */
@@ -777,7 +779,7 @@ body {
 
 .galleryNavbar {
     background-color: #d3d3d3;
-    font-family: "montserrat";
+    font-family: 'montserrat';
     width: 100vw;
     height: 10vh;
     position: sticky;
@@ -807,7 +809,7 @@ body {
     display: inline-block;
     height: 24vw;
     width: 24vw;
-    border: solid 1px #56575C;
+    border: solid 1px #56575c;
     margin: 5px;
     object-fit: cover;
 }
@@ -846,7 +848,6 @@ body {
 /* ===================== MEDIA QUERIES ===================== */
 
 @media only screen and (max-width: 1250px) {
-
     .nav-link {
         font-size: 1rem;
     }
@@ -880,7 +881,7 @@ body {
     .footerItems > a {
         max-height: 6vw;
         font-size: 5vw;
-        color: #56575C;
+        color: #56575c;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -889,7 +890,7 @@ body {
 
     .footerItems > a > img {
         height: 6vh;
-        color: #56575C;
+        color: #56575c;
     }
 
     .bookingLayout {
@@ -948,7 +949,6 @@ body {
 }
 
 @media only screen and (max-width: 1000px) {
-
     .nav-link {
         text-decoration: none;
         color: #56575c;
@@ -963,7 +963,7 @@ body {
     .footerItems > a {
         max-height: 6vw;
         font-size: 6vw;
-        color: #56575C;
+        color: #56575c;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -972,7 +972,7 @@ body {
 
     .footerItems > a > img {
         height: 6vh;
-        color: #56575C;
+        color: #56575c;
     }
 
     .react-datepicker__day {
@@ -1022,18 +1022,17 @@ body {
 
     .react-datepicker__navigation {
         border: 1px solid #ccc;
-        font-family: "montserrat";
+        font-family: 'montserrat';
         margin: 1rem 0.1rem 0.5rem 0.1rem;
     }
 }
 
 @media only screen and (max-width: 800px) {
-
     .nav-link {
         text-decoration: none;
         color: #56575c;
         padding-right: 0.5rem;
-        font-size: 0.80rem;
+        font-size: 0.8rem;
     }
 
     .aboutContent > p {
@@ -1058,9 +1057,6 @@ body {
 
 /* Modal */
 @media (max-width: 600px) {
-     html {
-        font-size: 14px;  /* reduce from 20px on mobile */
-    }
     .modal-btn {
         width: 80px;
         height: 40px;
@@ -1070,7 +1066,6 @@ body {
 
 /* Small screens */
 @media only screen and (max-width: 600px) {
-
     body {
         font-size: 1rem;
     }
@@ -1078,7 +1073,7 @@ body {
     /* Navbar */
     .dropdown {
         background-color: #d3d3d3;
-        font-family: "montserrat";
+        font-family: 'montserrat';
         width: 100vw;
         height: 10vh;
         position: sticky;
@@ -1089,7 +1084,7 @@ body {
     }
 
     .menuToggle {
-        color: #56575C;
+        color: #56575c;
         font-size: 1.25rem;
     }
 
@@ -1126,7 +1121,7 @@ body {
         background-color: #d3d3d3;
         font-size: 1.25rem;
         padding: 2vh 6vh 2vh 6vh;
-        border-bottom: solid 0.5px #56575C;
+        border-bottom: solid 0.5px #56575c;
     }
 
     .navbar {
@@ -1134,8 +1129,17 @@ body {
     }
 
     /* Bio */
+
+      .aboutBio {
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+        height: auto;        /* remove fixed height */
+        min-height: unset;
+    }
     .aboutPage {
-        font-family: "montserrat";
+        overflow-x: hidden;
+        font-family: 'montserrat';
         background-color: #d3d3d3;
         display: flex;
         justify-content: center;
@@ -1165,7 +1169,7 @@ body {
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        color: #56575C;
+        color: #56575c;
         width: 100%;
         max-width: 800px;
     }
