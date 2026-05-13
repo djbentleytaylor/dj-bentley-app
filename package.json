@@ -1,9 +1,0 @@
-{
-  "devDependencies": {
-    "@rollup/plugin-image": "^3.0.3"
-  },
-  "dependencies": {
-    "react-currency-input-field": "^3.8.0",
-    "react-datepicker": "^6.3.0"
-  }
-}
