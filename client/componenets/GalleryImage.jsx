@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import NewGalleryPhoto from '../assets/NewGalleryPhoto.jpg';
+import NewGalleryPhoto from '../assets/MarleyColeTheReception0325.jpg';
 
 export default function GalleryImage() {
 const [isTablet, setIsTablet] = useState(window.innerWidth >= 768 && window.innerWidth <= 900);

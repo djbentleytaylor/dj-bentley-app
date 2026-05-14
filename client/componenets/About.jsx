@@ -37,8 +37,7 @@ const About = () => {
                         }}
                     >
                         <li>
-                            Weddings — Ceremony, Cocktail Hour, Reception &amp;
-                            After Parties
+                            Weddings
                         </li>
                         <li>Corporate Events</li>
                         <li>All-Vinyl DJ Sets</li>

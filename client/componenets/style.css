@@ -389,7 +389,7 @@ body {
 .required-field {
     text-align: left;
     font-size: 0.75rem;
-    padding-left: 6rem;
+    padding-left: 8rem;
 }
 
 .input::placeholder {
