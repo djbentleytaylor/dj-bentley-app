@@ -17,7 +17,6 @@ body {
 
 .navbar {
     background-color: #daedf2;
-;
     font-family: 'montserrat';
     width: 100vw;
     height: 70px;
@@ -41,11 +40,10 @@ body {
     justify-content: space-between;
     font-size: 0.5rem;
     position: relative;
-     padding: 0 2rem 0 0.5rem;
+    padding: 0 2rem 0 0.5rem;
     top: 50%;
     transform: translateY(-50%);
-        padding: 0 2rem; 
-
+    padding: 0 2rem;
 }
 
 .nav-link {
@@ -130,7 +128,7 @@ body {
     flex-shrink: 0;
     width: 40vw;
     overflow: hidden;
-   margin-bottom: 2vh; 
+    margin-bottom: 2vh;
     margin-top: 1rem;
 }
 
@@ -140,7 +138,7 @@ body {
     display: block;
     object-fit: cover;
     margin-top: 2vh;
-     border-radius: 10px; 
+    border-radius: 10px;
 }
 
 .about-section {
@@ -216,8 +214,8 @@ body {
     width: 100%;
     height: 600px;
     background-size: cover;
-   background-position: center 60%; 
-position: relative; 
+    background-position: center 60%;
+    position: relative;
 }
 
 .galleryImage > img {
@@ -275,8 +273,8 @@ position: relative;
     text-align: left;
     font-size: 0.85rem;
     line-height: 1.7;
-      padding: 0 0 2.5rem 0; 
-     width: 100%; 
+    padding: 0 0 2.5rem 0;
+    width: 100%;
 }
 
 .requiredParent {
@@ -292,7 +290,7 @@ position: relative;
 .bookingLayout {
     display: flex;
     flex-direction: row;
-    align-items: stretch;
+    align-items: flex-start;  /* was: stretch — this was breaking sticky in FF/Safari */
     background-color: #d3d3d3;
     width: 100%;
     gap: 2rem;
@@ -302,16 +300,18 @@ position: relative;
 
 .bookingRight {
     flex: 1;
+       min-width: 0;  
     display: flex;
     flex-direction: column;
 }
 
 .bookingImage {
     width: 40vw;
+    min-width: 300px; 
     flex-shrink: 0;
     object-fit: cover;
     border-radius: 8px;
-    height: 100%;
+    max-height: 85vh;
     min-height: 400px;
     align-self: flex-start;
     position: sticky;
@@ -334,7 +334,7 @@ position: relative;
     border-radius: 6px;
     background: #e8e8e8;
     color: #56575c;
-      font-size: 0.75rem;
+    font-size: 0.75rem;
     font-family: 'montserrat';
     border: none;
 }
@@ -349,7 +349,7 @@ position: relative;
     justify-content: space-between;
     color: #56575c;
     font-family: 'montserrat';
-     font-size: 0.75rem;
+    font-size: 0.75rem;
     border: none;
     width: auto !important;
 }
@@ -403,8 +403,8 @@ position: relative;
 .required-field {
     text-align: left;
     font-size: 0.75rem;
-   
-     font-family: 'montserrat';
+
+    font-family: 'montserrat';
 }
 
 .input::placeholder {
@@ -543,10 +543,10 @@ position: relative;
 
 .reviews-awards-container > p {
     background-color: #e8e8e8;
- text-align: left !important;    
- margin: 1rem;
+    text-align: left !important;
+    margin: 1rem;
     align-self: flex-start;
-    width: 100%; 
+    width: 100%;
 }
 
 .reviews-awards-container > img {
@@ -578,7 +578,7 @@ position: relative;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    max-width: 900px;    /* bring this down from 900px */
+    max-width: 900px; /* bring this down from 900px */
     width: 100%;
     margin: 0 auto 2rem auto;
     padding: 0 1.5rem;
@@ -589,9 +589,9 @@ position: relative;
     background-color: #f5f5f2;
     font-size: 0.9rem;
     border-radius: 8px;
-    border-left: 4px solid #67bed9;   /* accent border */
+    border-left: 4px solid #67bed9; /* accent border */
     padding: 2rem 2rem 1.5rem 2rem;
-    box-shadow: -3px 3px 8px rgba(103, 190, 217, 0.3);   /* left and bottom */
+    box-shadow: -3px 3px 8px rgba(103, 190, 217, 0.3); /* left and bottom */
     width: 100%;
     box-sizing: border-box;
     position: relative;
@@ -603,7 +603,7 @@ position: relative;
     font-size: 5rem;
     color: #67bed9;
     position: absolute;
-     top: 0.1rem;   
+    top: 0.1rem;
     left: 1rem;
     line-height: 1;
     opacity: 0.4;
@@ -612,7 +612,7 @@ position: relative;
 .reviews-recent-reviews > p {
     margin-bottom: 0.5rem;
     padding: 0;
-    padding-top: 1.5rem;   /* push text down below the quote mark */
+    padding-top: 1.5rem; /* push text down below the quote mark */
     background-color: transparent;
     max-width: 100%;
     color: #56575c;
@@ -621,7 +621,7 @@ position: relative;
 .reviews-attribution {
     background-color: transparent;
     padding: 0;
-    font-style: normal;           /* remove italic */
+    font-style: normal; /* remove italic */
     font-weight: 500;
     font-size: 0.9rem;
     color: #56575c;
@@ -1014,11 +1014,11 @@ body.modal-open {
         flex-direction: row;
     }
 
-        .bookingFormWrapper {
+    .bookingFormWrapper {
         width: 85vw;
     }
 
-      .bookingBlurb {
+    .bookingBlurb {
         width: 85vw;
     }
 
@@ -1213,7 +1213,6 @@ body.modal-open {
         background-color: #daedf2;
         font-size: 1.25rem;
         padding: 2vh 6vh 2vh 6vh;
-     
     }
 
     /* Booking */
@@ -1223,7 +1222,7 @@ body.modal-open {
         gap: 1rem;
     }
 
-     .bookingFormWrapper {
+    .bookingFormWrapper {
         width: 100%;
     }
 
@@ -1279,16 +1278,15 @@ body.modal-open {
         flex: none;
     }
 
-     .reviews-recent-reviews::before {
-        font-size: 3.5rem;    /* smaller on mobile */
-        top: 0.3rem;          /* adjust down slightly for smaller size */
+    .reviews-recent-reviews::before {
+        font-size: 3.5rem; /* smaller on mobile */
+        top: 0.3rem; /* adjust down slightly for smaller size */
         left: 0.75rem;
     }
 
     /* Gallery */
     .galleryImage {
         height: 300px;
-       
     }
 
     .galleryImage > img {
@@ -1327,22 +1325,20 @@ body.modal-open {
     }
 }
 
-
-
 /* Modal */
 @media (max-width: 600px) {
-   .custom-modal {
-        max-width: 400px; 
+    .custom-modal {
+        max-width: 400px;
         padding: 16px;
     }
 
     .modal-h2 {
-        font-size: 1.1rem; 
+        font-size: 1.1rem;
         margin-bottom: 1rem;
     }
 
     .modal-p {
-        font-size: 14px;   
+        font-size: 14px;
         max-width: 180px;
         padding-left: 1rem;
         padding-right: 1rem;
@@ -1412,11 +1408,10 @@ body.modal-open {
         text-decoration: none;
         width: 100vw;
         text-align: end;
-      
+
         background-color: #daedf2;
         font-size: 1.25rem;
         padding: 2vh 6vh 2vh 6vh;
-     
     }
 
     .navbar {
@@ -1554,30 +1549,30 @@ body.modal-open {
         margin-top: 2rem;
     }
 
-       .reviews-recent-reviews::before {
-        font-size: 3.5rem;  
-        top: 0.3rem;          
+    .reviews-recent-reviews::before {
+        font-size: 3.5rem;
+        top: 0.3rem;
         left: 0.75rem;
     }
 
-      .reviews-recent-reviews > p {
-        padding-top: 1rem;    
+    .reviews-recent-reviews > p {
+        padding-top: 1rem;
     }
 
     .reviews-header {
         margin: 2rem;
     }
 
-  .reviews-card-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    max-width: 900px;    /* wider since it's a single column */
-    width: 100%;         /* add this */
-    margin: 0 auto 2rem auto;
-    padding: 0 1.5rem;
-    align-items: flex-start;
-}
+    .reviews-card-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        max-width: 900px; /* wider since it's a single column */
+        width: 100%; /* add this */
+        margin: 0 auto 2rem auto;
+        padding: 0 1.5rem;
+        align-items: flex-start;
+    }
 
     .reviews-recent-reviews {
         width: 100%;
