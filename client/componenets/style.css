@@ -358,12 +358,12 @@ body {
     padding: 8px 12px;
     border-radius: 6px;
     background: #e8e8e8;
-    justify-content: space-between;
     color: #56575c;
     font-family: 'montserrat';
     font-size: 0.75rem;
     border: none;
-    width: auto !important;
+    min-width: 0;        /* prevents flex children from overflowing */
+    /* remove width: auto !important */
 }
 
 .btn {
@@ -1540,7 +1540,8 @@ body.modal-open {
     .last-name-input,
     .textarea,
     .btn {
-        width: 100%; /* change from 85vw to 100% */
+      width: 100% !important;    /* override the auto !important at base level */
+; /* change from 85vw to 100% */
         box-sizing: border-box;
     }
 
