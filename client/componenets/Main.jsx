@@ -8,7 +8,7 @@ import bookingPhoto from '../assets/bookingPhoto.png';
 
 export default function Main() {
     return (
-        <>
+        <div className='app-wrapper'>
             <div id="home">
                 <Home />
             </div>
@@ -30,6 +30,6 @@ export default function Main() {
             <div id="galleryImage">
                 <GalleryImage />
             </div>
-        </>
+        </div>
     );
 }

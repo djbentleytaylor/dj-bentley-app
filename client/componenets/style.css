@@ -5,13 +5,16 @@
 
 html {
     font-size: 20px;
-    overflow-x: hidden;
 }
 
 body {
     font-size: 1rem;
     background-color: #d3d3d3;
+}
+
+.app-wrapper {
     overflow-x: hidden;
+    position: relative;
 }
 
 /* NavBar */
