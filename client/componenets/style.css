@@ -111,6 +111,12 @@ body {
 
 /* Bio/About */
 
+.aboutContainer {
+    width: 100%;
+    display: block;
+    overflow: hidden;  /* prevents any child content from bleeding out */
+}
+
 .aboutPage {
     font-family: 'montserrat';
     display: flex;
@@ -118,7 +124,7 @@ body {
     align-items: stretch;
     background-color: #d3d3d3;
     padding-top: 2rem;
-    max-height: 80vh;
+    max-height: none;
     padding-right: 2rem;
     width: 100vw;
     border-radius: 8px;
@@ -152,7 +158,6 @@ body {
     font-size: 0.875rem;
     line-height: 1.7;
     width: 100%;
-    min-height: 65vh;
 }
 
 .aboutBio h1 {
@@ -285,12 +290,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%; /* add this */
 }
 
 .bookingLayout {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;  /* was: stretch — this was breaking sticky in FF/Safari */
+    align-items: flex-start; /* was: stretch — this was breaking sticky in FF/Safari */
     background-color: #d3d3d3;
     width: 100%;
     gap: 2rem;
@@ -300,21 +306,20 @@ body {
 
 .bookingRight {
     flex: 1;
-       min-width: 0;  
+    min-width: 0;
     display: flex;
     flex-direction: column;
 }
 
 .bookingImage {
     width: 40vw;
-    min-width: 300px; 
+    min-width: 300px;
     flex-shrink: 0;
     object-fit: cover;
     border-radius: 8px;
     max-height: 85vh;
     min-height: 400px;
     align-self: flex-start;
-    position: sticky;
     top: 80px;
 }
 
@@ -323,11 +328,11 @@ body {
     gap: 12px;
     justify-content: space-between;
     margin-top: 16px;
-    width: 40vw;
+    width: 100%;
 }
 
 .input {
-    width: 40vw;
+    width: 100%;
     padding: 8px 12px;
     margin-top: 16px;
     flex-shrink: 0;
@@ -384,9 +389,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 40vw;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;    /* remove the left: 50% / transform trick at base level */    transform: translateX(-50%);
 }
 
 .details > h2 {
@@ -420,6 +423,15 @@ body {
 }
 
 /* Datepicker */
+
+.react-datepicker-wrapper {
+    width: 100%;
+}
+
+.react-datepicker-wrapper input {
+    width: 100%;
+    box-sizing: border-box;
+}
 
 .react-datepicker__day {
     display: inline-block;
@@ -1015,15 +1027,16 @@ body.modal-open {
     }
 
     .bookingFormWrapper {
-        width: 85vw;
+        width: 100%;
     }
 
     .bookingBlurb {
-        width: 85vw;
+        width: 100%;
     }
 
     .bookingImage {
         width: 40%;
+        min-width: 280px;
     }
 
     .input,
@@ -1031,7 +1044,9 @@ body.modal-open {
     .last-name-input,
     .textarea,
     .btn {
-        width: 45vw;
+        width: 100%;
+        box-sizing: border-box;
+        transform: translateX(0%);
     }
 
     .first-name-input {
@@ -1044,26 +1059,23 @@ body.modal-open {
         margin-bottom: 2rem;
     }
 
-    .input,
-    .first-name-input,
-    .last-name-input {
-        width: 85vw;
-        transform: translateX(0%);
-    }
-
     .name-input {
         flex-direction: row;
-        width: 85vw;
+        width: 100%; /* was: 85vw */
         gap: 12px;
+        box-sizing: border-box;
     }
 
     .details {
-        width: 85vw;
-        text-align: center;
+        width: 100%; /* was: 85vw */
     }
 
     .details > h2 {
         margin: 2rem;
+    }
+
+     .requiredParent {
+        width: 100%;        
     }
 
     .validation-error {
