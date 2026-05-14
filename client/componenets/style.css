@@ -584,14 +584,47 @@ position: relative;
 }
 
 .reviews-recent-reviews {
-    flex: 1;
     background-color: #f5f5f2;
-    font-size: .9rem;
+    font-size: 0.9rem;
     border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #67bed9;   /* accent border */
+    padding: 2rem 2rem 1.5rem 2rem;
+    box-shadow: -3px 3px 8px rgba(103, 190, 217, 0.3);   /* left and bottom */
     width: 100%;
     box-sizing: border-box;
+    position: relative;
+}
+
+.reviews-recent-reviews::before {
+    content: '\201C';
+    font-family: Georgia, serif;
+    font-size: 5rem;
+    color: #67bed9;
+    position: absolute;
+     top: 0.1rem;   
+    left: 1rem;
+    line-height: 1;
+    opacity: 0.4;
+}
+
+.reviews-recent-reviews > p {
+    margin-bottom: 0.5rem;
+    padding: 0;
+    padding-top: 1.5rem;   /* push text down below the quote mark */
+    background-color: transparent;
+    max-width: 100%;
+    color: #56575c;
+}
+
+.reviews-attribution {
+    background-color: transparent;
+    padding: 0;
+    font-style: normal;           /* remove italic */
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #56575c;
+    margin-top: 1rem;
+    letter-spacing: 0.03em;
 }
 
 .reviewsLink {
@@ -1244,6 +1277,12 @@ body.modal-open {
         flex: none;
     }
 
+     .reviews-recent-reviews::before {
+        font-size: 3.5rem;    /* smaller on mobile */
+        top: 0.3rem;          /* adjust down slightly for smaller size */
+        left: 0.75rem;
+    }
+
     /* Gallery */
     .galleryImage {
         height: 300px;
@@ -1286,12 +1325,7 @@ body.modal-open {
     }
 }
 
-/* Force row on reviews cards above 901px */
-@media (min-width: 901px) {
-    .reviews-card-grid {
-        flex-direction: row;
-    }
-}
+
 
 /* Modal */
 @media (max-width: 600px) {
@@ -1518,15 +1552,30 @@ body.modal-open {
         margin-top: 2rem;
     }
 
+       .reviews-recent-reviews::before {
+        font-size: 3.5rem;    /* smaller on mobile */
+        top: 0.3rem;          /* adjust down slightly for smaller size */
+        left: 0.75rem;
+    }
+
+      .reviews-recent-reviews > p {
+        padding-top: 1rem;    /* push text below the quote mark */
+    }
+
     .reviews-header {
         margin: 2rem;
     }
 
-    .reviews-card-grid {
-        flex-direction: column;
-        padding: 0 0.5rem;
-        width: 100%;
-    }
+  .reviews-card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 900px;    /* wider since it's a single column */
+    width: 100%;         /* add this */
+    margin: 0 auto 2rem auto;
+    padding: 0 1.5rem;
+    align-items: flex-start;
+}
 
     .reviews-recent-reviews {
         width: 100%;
