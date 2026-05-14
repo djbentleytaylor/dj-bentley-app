@@ -5,6 +5,7 @@
 
 html {
     font-size: 20px;
+        overflow-x: hidden;
 }
 
 body {
@@ -730,6 +731,11 @@ body {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+        overflow: hidden;   
+}
+
+.slick-slider {
+    overflow: hidden;
 }
 
 .custom-prev {
@@ -1179,7 +1185,7 @@ body.modal-open {
 
     .dropdown {
         display: flex;
-        background-color: #d3d3d3;
+        background-color: #daedf2;
         font-family: 'montserrat';
         width: 100vw;
         height: 70px;
@@ -1430,6 +1436,24 @@ body.modal-open {
 
     .navbar {
         display: none;
+    }
+
+     .carousel {
+        width: 100%;
+        left: 0;
+        transform: none;
+        overflow: hidden;
+    }
+
+    .musicPlayer {
+        width: 100%;
+        left: 0;
+        transform: none;
+        margin: 0 auto;
+    }
+
+    .slick-slider {
+        overflow: hidden;
     }
 
     /* Bio */
