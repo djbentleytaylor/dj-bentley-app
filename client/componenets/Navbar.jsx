@@ -1,17 +1,24 @@
-import  { useState } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
-import NavBarLogo from "../assets/NewLogo.png"
+import { useState } from 'react';
+import { Link, animateScroll as scroll } from 'react-scroll';
+import NavBarLogo from '../assets/NewLogo.png';
 
 export default function Navbar() {
+    const [toggle, setToggle] = useState(false);
 
-    const [toggle, setToggle] = useState(false)
- 
     return (
         <>
-            <div className='navbar'>
+            <div className="navbar">
+                <nav className="nav-links">
+                    <Link
+                        to="home"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={600}
+                    >
+                        <img src={NavBarLogo} className="logo" />
+                    </Link>
 
-                <nav className='nav-links'>
-                    <img src={NavBarLogo} className='logo' />
                     <div className="navItems">
                         <Link
                             activeClass="active"
@@ -21,7 +28,9 @@ export default function Navbar() {
                             smooth={true}
                             offset={-70}
                             duration={600}
-                        >Home</Link>
+                        >
+                            Home
+                        </Link>
                         <Link
                             activeClass="active"
                             className="nav-link"
@@ -30,7 +39,9 @@ export default function Navbar() {
                             smooth={true}
                             offset={-70}
                             duration={600}
-                        >About</Link>
+                        >
+                            About
+                        </Link>
                         <Link
                             activeClass="active"
                             className="nav-link"
@@ -39,7 +50,9 @@ export default function Navbar() {
                             smooth={true}
                             offset={-70}
                             duration={600}
-                        >Inquire</Link>
+                        >
+                            Inquire
+                        </Link>
                         <Link
                             activeClass="active"
                             className="nav-link"
@@ -48,7 +61,9 @@ export default function Navbar() {
                             smooth={true}
                             offset={-70}
                             duration={600}
-                        >Reviews</Link>
+                        >
+                            Reviews
+                        </Link>
                         <Link
                             activeClass="active"
                             className="nav-link"
@@ -57,7 +72,9 @@ export default function Navbar() {
                             smooth={true}
                             offset={-70}
                             duration={600}
-                        >Mixes</Link>
+                        >
+                            Mixes
+                        </Link>
                         <Link
                             activeClass="active"
                             className="nav-link"
@@ -66,21 +83,35 @@ export default function Navbar() {
                             smooth={true}
                             offset={-70}
                             duration={600}
-                        >Gallery</Link>
+                        >
+                            Gallery
+                        </Link>
                     </div>
                 </nav>
             </div>
 
             {/* Dropdown menu for smaller screen sizes */}
 
-            <div className='dropdown'>
+            <div className="dropdown">
+                <nav className="drop-links">
+                    <Link
+                        to="home"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={600}
+                        onClick={() => setToggle(false)}
+                    >
+                        <img src={NavBarLogo} className="logo" />
+                    </Link>
+                    <div
+                        className="menuToggle"
+                        onClick={() => setToggle((prevToggle) => !prevToggle)}
+                    >
+                        Menu
+                    </div>
 
-                <nav className='drop-links'>
-                    <img src={NavBarLogo} className='logo' />
-
-                    <div className="menuToggle" onClick={() => setToggle(prevToggle => !prevToggle)}>Menu</div>
-
-                    {toggle &&
+                    {toggle && (
                         <div className="dropItems">
                             <Link
                                 activeClass="active"
@@ -90,8 +121,12 @@ export default function Navbar() {
                                 smooth={true}
                                 offset={-70}
                                 duration={600}
-                                onClick={() => setToggle(prevToggle => !prevToggle)}
-                            >Home</Link>
+                                onClick={() =>
+                                    setToggle((prevToggle) => !prevToggle)
+                                }
+                            >
+                                Home
+                            </Link>
                             <Link
                                 activeClass="active"
                                 className="drop-link"
@@ -100,8 +135,12 @@ export default function Navbar() {
                                 smooth={true}
                                 offset={-70}
                                 duration={600}
-                                onClick={() => setToggle(prevToggle => !prevToggle)}
-                            >Bio</Link>
+                                onClick={() =>
+                                    setToggle((prevToggle) => !prevToggle)
+                                }
+                            >
+                                Bio
+                            </Link>
                             <Link
                                 activeClass="active"
                                 className="drop-link"
@@ -110,8 +149,12 @@ export default function Navbar() {
                                 smooth={true}
                                 offset={-70}
                                 duration={600}
-                                onClick={() => setToggle(prevToggle => !prevToggle)}
-                            >Contact</Link>
+                                onClick={() =>
+                                    setToggle((prevToggle) => !prevToggle)
+                                }
+                            >
+                                Contact
+                            </Link>
                             <Link
                                 activeClass="active"
                                 className="drop-link"
@@ -120,8 +163,12 @@ export default function Navbar() {
                                 smooth={true}
                                 offset={-70}
                                 duration={600}
-                                onClick={() => setToggle(prevToggle => !prevToggle)}
-                            >Reviews</Link>
+                                onClick={() =>
+                                    setToggle((prevToggle) => !prevToggle)
+                                }
+                            >
+                                Reviews
+                            </Link>
                             <Link
                                 activeClass="active"
                                 className="drop-link"
@@ -130,8 +177,12 @@ export default function Navbar() {
                                 smooth={true}
                                 offset={-70}
                                 duration={600}
-                                onClick={() => setToggle(prevToggle => !prevToggle)}
-                            >Mixes</Link>
+                                onClick={() =>
+                                    setToggle((prevToggle) => !prevToggle)
+                                }
+                            >
+                                Mixes
+                            </Link>
                             <Link
                                 activeClass="active"
                                 className="drop-link"
@@ -140,12 +191,16 @@ export default function Navbar() {
                                 smooth={true}
                                 offset={-70}
                                 duration={600}
-                                onClick={() => setToggle(prevToggle => !prevToggle)}
-                            >Gallery</Link>
+                                onClick={() =>
+                                    setToggle((prevToggle) => !prevToggle)
+                                }
+                            >
+                                Gallery
+                            </Link>
                         </div>
-                    }
+                    )}
                 </nav>
             </div>
         </>
-    )
+    );
 }

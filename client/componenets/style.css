@@ -520,6 +520,7 @@ position: relative;
     gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .reviews-header {
@@ -1194,7 +1195,7 @@ body.modal-open {
         align-items: flex-end;
         justify-content: flex-end;
         flex-shrink: 1;
-        background-color: #d3d3d3;
+        background-color: #daedf2;
     }
 
     .logo {
@@ -1208,10 +1209,10 @@ body.modal-open {
         width: 100vw;
         text-align: end;
         color: #56575c;
-        background-color: #d3d3d3;
+        background-color: #daedf2;
         font-size: 1.25rem;
         padding: 2vh 6vh 2vh 6vh;
-        border-bottom: solid 0.5px #56575c;
+     
     }
 
     /* Booking */
@@ -1365,7 +1366,7 @@ body.modal-open {
         display: none;
     }
     .dropdown {
-        background-color: #d3d3d3;
+        background-color: #daedf2;
         font-family: 'montserrat';
         width: 100vw;
         height: 10vh;
@@ -1397,7 +1398,7 @@ body.modal-open {
         align-items: flex-end;
         justify-content: flex-end;
         flex-shrink: 1;
-        background-color: #d3d3d3;
+        background-color: #daedf2;
     }
 
     .logo {
@@ -1410,11 +1411,11 @@ body.modal-open {
         text-decoration: none;
         width: 100vw;
         text-align: end;
-        color: #56575c;
-        background-color: #d3d3d3;
+      
+        background-color: #daedf2;
         font-size: 1.25rem;
         padding: 2vh 6vh 2vh 6vh;
-        border-bottom: solid 0.5px #56575c;
+     
     }
 
     .navbar {
@@ -1553,13 +1554,13 @@ body.modal-open {
     }
 
        .reviews-recent-reviews::before {
-        font-size: 3.5rem;    /* smaller on mobile */
-        top: 0.3rem;          /* adjust down slightly for smaller size */
+        font-size: 3.5rem;  
+        top: 0.3rem;          
         left: 0.75rem;
     }
 
       .reviews-recent-reviews > p {
-        padding-top: 1rem;    /* push text below the quote mark */
+        padding-top: 1rem;    
     }
 
     .reviews-header {

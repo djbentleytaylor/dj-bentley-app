@@ -19,7 +19,7 @@ function Reviews() {
             <div className="reviews-awards-container">
                 <div className="badgeContainer">
                     <img
-                        width={100}
+                        width={130}
                         src="https://www.rockymountainbride.com/wp-content/uploads/2026/01/2026-Badges14.png"
                         alt="Rocky Mountain Bride Featured Vendor"
                     />
