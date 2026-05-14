@@ -76,6 +76,10 @@ body {
     margin-top: 0.5rem;
 }
 
+.logo:hover {
+    cursor: pointer;
+}
+
 .nav-link {
     text-decoration: none;
     color: #56575c;
@@ -91,7 +95,7 @@ body {
 
 .dropdown {
     display: none;
-    background-color: #daedf2; 
+    background-color: #daedf2;
 }
 
 /* Home */
@@ -345,7 +349,7 @@ body {
     flex-shrink: 0;
     border-radius: 6px;
     background: #e8e8e8;
-    color: #56575c;
+    color: #black;
     font-size: 0.75rem;
     font-family: 'montserrat';
     border: none;
@@ -362,7 +366,7 @@ body {
     font-family: 'montserrat';
     font-size: 0.75rem;
     border: none;
-    min-width: 0;        /* prevents flex children from overflowing */
+    min-width: 0; /* prevents flex children from overflowing */
     /* remove width: auto !important */
 }
 
@@ -1540,8 +1544,7 @@ body.modal-open {
     .last-name-input,
     .textarea,
     .btn {
-      width: 100% !important;    /* override the auto !important at base level */
-; /* change from 85vw to 100% */
+        width: 100% !important; /* override the auto !important at base level */ /* change from 85vw to 100% */
         box-sizing: border-box;
     }
 
