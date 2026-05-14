@@ -131,7 +131,7 @@ export default function Navbar() {
                                 offset={-70}
                                 duration={600}
                                 onClick={() => setToggle(prevToggle => !prevToggle)}
-                            >DJ Mixes</Link>
+                            >Mixes</Link>
                             <Link
                                 activeClass="active"
                                 className="drop-link"

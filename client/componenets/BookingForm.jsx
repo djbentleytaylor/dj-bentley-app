@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import FormModal from './FormModal';
 import DatePicker from 'react-datepicker';
-import bookingPhoto from '../assets/bookingPhoto.png';
+import bookingPhoto from '../assets/bookingPhoto2.png';
+
 
 const BookingForm = () => {
     const [inputs, setInputs] = useState({
@@ -103,10 +104,7 @@ const BookingForm = () => {
                 },
             );
 
-        // handleOpenModal();
-        console.log(showModal);
-
-        console.log('submitted form!');
+     
         setInputs({
             first_name: '',
             last_name: '',
@@ -121,17 +119,17 @@ const BookingForm = () => {
         });
     }
 
-    console.log(hasError);
-    console.log(inputs);
+   
 
     return (
         <div className="bookingLayout">
             <img src={bookingPhoto} className="bookingImage" />
             <div className="bookingRight">
                 <h1 className="bookH1">Inquire</h1>
+                 <div className="bookingFormWrapper">
                 <p className="bookingBlurb">
                     DJ Bentley is dedicated to transforming your events into
-                    lasting impressions for you and your guests! He will work
+                    lasting impressions for you and your guests.  He will work
                     closely with you to understand your vision, preferences, and
                     any specific requests to create a personalized experience
                     that exceeds expectations.
@@ -273,6 +271,7 @@ const BookingForm = () => {
                             Submit
                         </button>
                     </form>
+                    </div>
                     <FormModal
                         show={showModal}
                         handleClose={handleCloseModal}
