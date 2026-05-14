@@ -958,6 +958,7 @@ body.modal-open {
     border: solid 1px #56575c;
     margin: 5px;
     object-fit: cover;
+     cursor: pointer; 
 }
 
 .carouselContainer {

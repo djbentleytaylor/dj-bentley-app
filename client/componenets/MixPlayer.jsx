@@ -30,7 +30,7 @@ const MixPlayer = () => {
                 }));
 
                 setMixes(mixTiles);
-                console.log(mixTiles);
+                // console.log(mixTiles);
             } catch (error) {
                 console.error("Error fetching Mixcloud data:", error);
             }

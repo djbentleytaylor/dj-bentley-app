@@ -131,12 +131,15 @@ export default function Gallery() {
     const handlePhotoClick = async (index) => {
         await setSelectedPhotoIndex(index);
         setShowCarousel((prevShow) => !prevShow);
+          document.body.classList.add('modal-open');
     };
 
     const closeCarousel = () => {
         // setShowCarousel(false)
+             setShowCarousel((prevShow) => !prevShow);
         setSelectedPhotoIndex(null);
-        console.log('carousel closed');
+         document.body.classList.remove('modal-open')
+        // console.log('carousel closed');
     };
 
     const CustomPrevArrow = ({ onClick }) => (
