@@ -10,7 +10,7 @@ html {
 body {
     font-size: 1rem;
     background-color: #d3d3d3;
-        overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 /* NavBar */
@@ -55,7 +55,7 @@ body {
     left: 0;
     width: 0;
     height: 1px;
-    background-color: #56575C;
+    background-color: #56575c;
     transition: width 0.3s ease;
 }
 
@@ -346,8 +346,9 @@ body {
     height: 3rem;
     flex-shrink: 0;
     border-radius: 5.625rem;
-    background: #c74a32;
-    color: #d3d3d3;
+    background: #67bed9;
+
+    color: #ffffff;
     font-family: 'montserrat';
     font-size: 1rem;
     margin-top: 20px;
@@ -359,7 +360,7 @@ body {
 }
 
 .btn:hover {
-    background: #a33a24;
+    background: #2596be;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -618,8 +619,8 @@ body {
     height: 3rem;
     flex-shrink: 0;
     border-radius: 5.625rem;
-    background: #c74a32;
-    color: #d3d3d3;
+    background: #67bed9;
+    color: #ffffff;
     font-family: 'montserrat';
     font-size: 1rem;
     margin-top: 10px;
@@ -629,7 +630,7 @@ body {
 }
 
 .reviewsBtn:hover {
-    background: #a33a24;
+    background: #2596be;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -721,35 +722,53 @@ body {
 }
 
 .modal-btn {
-    width: 50%;
+    width: 30%;
     height: 3rem;
     flex-shrink: 0;
     border-radius: 5.625rem;
-    background: #c74a32;
+    background: #67bed9;
     font-family: 'montserrat';
     border: none;
     margin: 0 auto;
-    color: #d3d3d3;
+    color: #ffffff;
+}
+
+.modal-btn:hover {
+    background: #2596be;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .modal-h2 {
     text-align: center;
     font-family: montserrat;
     color: #56575c;
+    margin-bottom: 1.5rem;
 }
 
 .modal-p {
     text-align: center;
     font-family: montserrat;
     color: #56575c;
-    font-size: 16px;
+    font-size: 18px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .modal-div {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 24px 2rem;
     font-size: 16px;
+}
+
+body.modal-open {
+    overflow: hidden;
 }
 
 /* Footer */
@@ -797,7 +816,7 @@ body {
     margin: 0.5vh 0;
     letter-spacing: 0.05em;
     margin-top: 5vh;
-      font-family: 'montserrat';
+    font-family: 'montserrat';
 }
 
 .footer-copyright a {
@@ -1068,21 +1087,20 @@ body {
 }
 
 @media only screen and (max-width: 900px) {
-
     /* Global */
     body {
         overflow-x: hidden;
     }
 
     /* Navbar */
-       .navbar {
+    .navbar {
         display: none;
     }
 
     .dropdown {
         display: flex;
         background-color: #d3d3d3;
-        font-family: "montserrat";
+        font-family: 'montserrat';
         width: 100vw;
         height: 70px;
         position: sticky;
@@ -1091,7 +1109,7 @@ body {
         z-index: 100;
     }
 
-     .menuToggle {
+    .menuToggle {
         color: #56575c;
         font-size: 1.25rem;
     }
@@ -1105,7 +1123,7 @@ body {
 
     .dropItems {
         position: absolute;
-      top: 70px;   
+        top: 70px;
         width: 100vw;
         display: flex;
         flex-direction: column;
@@ -1143,7 +1161,7 @@ body {
         width: 100%;
         height: 40vh;
         object-fit: cover;
-        position: static;   /* fixes the sticky image issue */
+        position: static; /* fixes the sticky image issue */
     }
 
     .bookingRight {
@@ -1164,11 +1182,11 @@ body {
         box-sizing: border-box;
     }
 
-      .react-datepicker-wrapper {
+    .react-datepicker-wrapper {
         width: 100%;
     }
 
-       .react-datepicker-wrapper input {
+    .react-datepicker-wrapper input {
         width: 100%;
         box-sizing: border-box;
     }
@@ -1188,26 +1206,26 @@ body {
     .reviews-recent-reviews {
         width: 100%;
         box-sizing: border-box;
-        flex: none;  
+        flex: none;
     }
 
     /* Gallery */
     .galleryImage {
         height: 300px;
-    overflow: hidden; /* adjust to show the best part of the image */
+        overflow: hidden; /* adjust to show the best part of the image */
     }
 
-      .galleryImage > img {
+    .galleryImage > img {
         width: 100%;
-        height: 100%;      
+        height: 100%;
         object-fit: cover;
-        position: static;  
+        position: static;
         top: 0;
     }
-       .galleryH1 {
+    .galleryH1 {
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);  /* centers both axes */
+        transform: translate(-50%, -50%); /* centers both axes */
         width: 50vw;
     }
 }
@@ -1242,6 +1260,23 @@ body {
 
 /* Modal */
 @media (max-width: 600px) {
+   .custom-modal {
+        max-width: 400px; 
+        padding: 16px;
+    }
+
+    .modal-h2 {
+        font-size: 1.1rem; 
+        margin-bottom: 1rem;
+    }
+
+    .modal-p {
+        font-size: 14px;   
+        max-width: 180px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     .modal-btn {
         width: 80px;
         height: 40px;
@@ -1257,7 +1292,7 @@ body {
 
     /* Navbar */
 
-        .navbar {
+    .navbar {
         display: none;
     }
     .dropdown {
@@ -1319,12 +1354,12 @@ body {
 
     /* Bio */
 
-      .aboutBio {
+    .aboutBio {
         width: 100%;
         box-sizing: border-box;
         overflow: hidden;
-      min-height: unset;  
-       padding: 1rem;  
+        min-height: unset;
+        padding: 1rem;
     }
     .aboutPage {
         overflow-x: hidden;
@@ -1335,9 +1370,9 @@ body {
         align-items: center;
         margin: 0;
         width: 100vw;
-     padding: 0.5rem; 
+        padding: 0.5rem;
         gap: 1.5rem;
-            max-height: none; 
+        max-height: none;
     }
 
     .aboutImage {
@@ -1396,30 +1431,30 @@ body {
     .last-name-input,
     .textarea,
     .btn {
-         width: 100%;        /* change from 85vw to 100% */
-    box-sizing: border-box;
+        width: 100%; /* change from 85vw to 100% */
+        box-sizing: border-box;
     }
 
     .input,
     .first-name-input,
     .last-name-input {
-    width: 100%;    
+        width: 100%;
         transform: translateX(0%);
     }
 
     .name-input {
-    width: 100%;     
-    box-sizing: border-box;
-}
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-.react-datepicker-wrapper {
-    width: 100%;
-}
+    .react-datepicker-wrapper {
+        width: 100%;
+    }
 
-.react-datepicker-wrapper input {
-    width: 100%;
-    box-sizing: border-box;
-}
+    .react-datepicker-wrapper input {
+        width: 100%;
+        box-sizing: border-box;
+    }
 
     .details {
         position: static;
@@ -1528,52 +1563,52 @@ body {
     }
 
     @media (max-width: 768px) {
-    .footerLogo {
-        width: 60vw;
+        .footerLogo {
+            width: 60vw;
+        }
+
+        .footerItems {
+            width: 50vw;
+        }
+
+        .footerItems > a {
+            font-size: 7vw;
+            max-height: 12vw;
+        }
+
+        .footerItems > a > img {
+            height: 4vh;
+        }
+
+        .footer-copyright {
+            font-size: 2.5vw;
+            margin: 1vh 0;
+        }
     }
 
-    .footerItems {
-        width: 50vw;
-    }
+    @media (max-width: 480px) {
+        .footerLogo {
+            width: 75vw;
+        }
 
-    .footerItems > a {
-        font-size: 7vw;
-        max-height: 12vw;
-    }
+        .footerItems {
+            width: 70vw;
+        }
 
-    .footerItems > a > img {
-        height: 4vh;
-    }
+        .footerItems > a {
+            font-size: 9vw;
+            max-height: 15vw;
+        }
 
-    .footer-copyright {
-        font-size: 2.5vw;
-        margin: 1vh 0;
-    }
-}
+        .footerItems > a > img {
+            height: 3.5vh;
+        }
 
-@media (max-width: 480px) {
-    .footerLogo {
-        width: 75vw;
+        .footer-copyright {
+            font-size: 3.5vw;
+            margin: 1.5vh 0;
+        }
     }
-
-    .footerItems {
-        width: 70vw;
-    }
-
-    .footerItems > a {
-        font-size: 9vw;
-        max-height: 15vw;
-    }
-
-    .footerItems > a > img {
-        height: 3.5vh;
-    }
-
-    .footer-copyright {
-        font-size: 3.5vw;
-        margin: 1.5vh 0;
-    }
-}
 }
 
 /* Colors */

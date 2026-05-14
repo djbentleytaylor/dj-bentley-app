@@ -13,10 +13,11 @@ const FormModal = (props) => {
             contentLabel="Form Modal"
             className="custom-modal"
             overlayClassName="custom-overlay"
+             bodyOpenClassName="modal-open" 
         >
             <div>
                 <h2 className="modal-h2">Request Sent</h2>
-                <br></br>
+              
                 <p className="modal-p">
                     Your request was sent, and I&apos;ll get back to you as soon as
                     possible. Thanks!
