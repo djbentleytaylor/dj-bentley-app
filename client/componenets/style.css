@@ -5,7 +5,7 @@
 
 html {
     font-size: 20px;
-        overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 body {
@@ -88,6 +88,7 @@ body {
 
 .dropdown {
     display: none;
+    background-color: #daedf2; 
 }
 
 /* Home */
@@ -115,7 +116,7 @@ body {
 .aboutContainer {
     width: 100%;
     display: block;
-    overflow: hidden;  /* prevents any child content from bleeding out */
+    overflow: hidden; /* prevents any child content from bleeding out */
 }
 
 .aboutPage {
@@ -135,10 +136,10 @@ body {
     flex-shrink: 0;
     width: 40vw;
     overflow: hidden;
-    margin-bottom: 3vh;    /* remove margin-bottom: 2vh */
-    margin-top: 1.5rem;  
-     border-radius: 10px;  
-      align-self: stretch;  
+    margin-bottom: 3vh; /* remove margin-bottom: 2vh */
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    align-self: stretch;
 }
 
 .bioImage {
@@ -146,8 +147,8 @@ body {
     height: 100%;
     display: block;
     object-fit: cover;
- margin-top: 0;
-    border-radius: 0;   
+    margin-top: 0;
+    border-radius: 0;
 }
 
 .about-section {
@@ -392,7 +393,8 @@ body {
     align-items: center;
     justify-content: center;
     width: 40vw;
-    position: static;    /* remove the left: 50% / transform trick at base level */    transform: translateX(-50%);
+    position: static; /* remove the left: 50% / transform trick at base level */
+    transform: translateX(-50%);
 }
 
 .details > h2 {
@@ -731,7 +733,7 @@ body {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-        overflow: hidden;   
+    overflow: hidden;
 }
 
 .slick-slider {
@@ -1082,8 +1084,8 @@ body.modal-open {
         margin: 2rem;
     }
 
-     .requiredParent {
-        width: 100%;        
+    .requiredParent {
+        width: 100%;
     }
 
     .validation-error {
@@ -1438,7 +1440,7 @@ body.modal-open {
         display: none;
     }
 
-     .carousel {
+    .carousel {
         width: 100%;
         left: 0;
         transform: none;
