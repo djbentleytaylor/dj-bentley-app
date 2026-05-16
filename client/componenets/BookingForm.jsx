@@ -4,7 +4,6 @@ import FormModal from './FormModal';
 import DatePicker from 'react-datepicker';
 import bookingPhoto from '../assets/bookingPhoto2.png';
 
-
 const BookingForm = () => {
     const [inputs, setInputs] = useState({
         first_name: '',
@@ -97,180 +96,191 @@ const BookingForm = () => {
                 (result) => {
                     console.log(result.text);
                     handleOpenModal();
+                    setInputs({
+                        first_name: '',
+                        last_name: '',
+                        user_email: '',
+                        event_type: '',
+                        requested_date: '',
+                        event_location: '',
+                        event_duration: '',
+                        estimated_budget: '',
+                        how: '',
+                        details: '',
+                    });
                 },
                 (error) => {
                     console.log(error.text);
                     setFormSubmitError(true);
                 },
             );
-
-     
-        setInputs({
-            first_name: '',
-            last_name: '',
-            user_email: '',
-            event_type: '',
-            requested_date: '',
-            event_location: '',
-            event_duration: '',
-            estimated_budget: '',
-            how: '',
-            details: '',
-        });
     }
-
-   
 
     return (
         <div className="bookingLayout">
             <img src={bookingPhoto} className="bookingImage" />
             <div className="bookingRight">
                 <h1 className="bookH1">Inquire</h1>
-                 <div className="bookingFormWrapper">
-                <p className="bookingBlurb">
-                    DJ Bentley is dedicated to transforming your events into
-                    lasting impressions for you and your guests.  He will work
-                    closely with you to understand your vision, preferences, and
-                    any specific requests to create a personalized experience
-                    that exceeds expectations.
-                </p>
-                <div className="eventPage">
-                    <form className="bookContent" onSubmit={sendEmail}>
-                        <div className="requiredParent">
-                            <p className="required-field">* Required field</p>
-                        </div>
-                        <div className="name-input">
+                <div className="bookingFormWrapper">
+                    <p className="bookingBlurb">
+                        DJ Bentley is dedicated to transforming your events into
+                        lasting impressions for you and your guests. He will
+                        work closely with you to understand your vision,
+                        preferences, and any specific requests to create a
+                        personalized experience that exceeds expectations.
+                    </p>
+                    <div className="eventPage">
+                        <form className="bookContent" onSubmit={sendEmail}>
+                            <div className="requiredParent">
+                                <p className="required-field">
+                                    * Required field
+                                </p>
+                            </div>
+                            <div className="name-input">
+                                <input
+                                    className="first-name-input"
+                                    type="text"
+                                    name="first_name"
+                                    placeholder="First Name *"
+                                    value={inputs.first_name}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                />
+                                <input
+                                    className="last-name-input"
+                                    type="text"
+                                    name="last_name"
+                                    placeholder="Last Name *"
+                                    value={inputs.last_name}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                />
+                            </div>
                             <input
-                                className="first-name-input"
+                                className="input"
                                 type="text"
-                                name="first_name"
-                                placeholder="First Name *"
+                                name="user_email"
+                                placeholder="Email *"
+                                value={inputs.user_email}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                            />
+                            <select
+                                className="input"
+                                name="event_type"
+                                value={inputs.event_type}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                            >
+                                <option value="">--Event Type *--</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="corporate event">
+                                    Corporate Event
+                                </option>
+                                <option value="all vinyl dj set">
+                                    All Vinyl DJ Set
+                                </option>
+                                <option value="private celebration">
+                                    Private Celebration
+                                </option>
+                                <option value="social event">
+                                    Social Event
+                                </option>
+                                <option value="other">Other</option>
+                            </select>
+                            <DatePicker
+                                className="input"
+                                name="requested_date"
+                                selected={inputs.requested_date}
+                                onChange={handleDateChange}
+                                onBlur={handleBlur}
+                                placeholderText="Event Date *"
+                            />
+                            <input
+                                className="input"
+                                type="text"
+                                name="event_location"
+                                placeholder="Event Location"
+                                value={inputs.event_location}
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                             />
                             <input
-                                className="last-name-input"
+                                className="input"
                                 type="text"
-                                name="last_name"
-                                placeholder="Last Name *"
+                                name="event_duration"
+                                placeholder="Event Duration"
+                                value={inputs.event_duration}
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                             />
-                        </div>
-                        <input
-                            className="input"
-                            type="text"
-                            name="user_email"
-                            placeholder="Email *"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                        />
-                        <select
-                            className="input"
-                            name="event_type"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                        >
-                            <option value="">--Event Type *--</option>
-                            <option value="wedding">Wedding</option>
-                            <option value="corporate event">
-                                Corporate Event
-                            </option>
-                            <option value="all vinyl dj set">
-                                All Vinyl DJ Set
-                            </option>
-                            <option value="private celebration">
-                                Private Celebration
-                            </option>
-                            <option value="social event">Social Event</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <DatePicker
-                            className="input"
-                            name="requested_date"
-                            selected={inputs.requested_date}
-                            onChange={handleDateChange}
-                            onBlur={handleBlur}
-                            placeholderText="Event Date *"
-                        />
-                        <input
-                            className="input"
-                            type="text"
-                            name="event_location"
-                            placeholder="Event Location"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                        />
-                        <input
-                            className="input"
-                            type="text"
-                            name="event_duration"
-                            placeholder="Event Duration"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                        />
-                        <input
-                            className="input"
-                            type="text"
-                            name="estimated_budget"
-                            placeholder="Estimated Budget"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                        />
-                        <select
-                            className="input"
-                            name="how"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                        >
-                            <option value="">
-                                -- How did you hear about DJ Bentley? * --
-                            </option>
-                            <option value="The Knot/Wedding Wire">
-                                The Knot/Wedding Wire
-                            </option>
-                            <option value="social media">Social Media</option>
-                            <option value="referral">Referral</option>
-                            <option value="attended prior event">
-                                Attended Prior Event
-                            </option>
-                            <option value="other">Other</option>
-                        </select>
-                        <textarea
-                            className="input"
-                            name="details"
-                            placeholder="Additional Event Details"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                        />
-                        {hasError && (
-                            <div className="validation-error">
-                                <h3>{requiredFieldError}</h3>
-                            </div>
-                        )}
-                        {formSubmitError && (
-                            <div style={{ padding: '2rem' }}>
-                                <h3
-                                    style={{
-                                        color: 'red',
-                                        textAlign: 'center',
-                                    }}
-                                >
-                                    An error has occurred submitting your
-                                    request. Please email
-                                    djbentleytaylor@gmail.com with your request
-                                    information.
-                                </h3>
-                            </div>
-                        )}
-                        <button
-                            type="submit"
-                            className="btn"
-                            disabled={isDisabled}
-                        >
-                            Submit
-                        </button>
-                    </form>
+                            <input
+                                className="input"
+                                type="text"
+                                name="estimated_budget"
+                                placeholder="Estimated Budget"
+                                value={inputs.estimated_budget}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                            />
+                            <select
+                                className="input"
+                                name="how"
+                                value={inputs.how}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                            >
+                                <option value="">
+                                    -- How did you hear about DJ Bentley? * --
+                                </option>
+                                <option value="The Knot/Wedding Wire">
+                                    The Knot/Wedding Wire
+                                </option>
+                                <option value="social media">
+                                    Social Media
+                                </option>
+                                <option value="referral">Referral</option>
+                                <option value="attended prior event">
+                                    Attended Prior Event
+                                </option>
+                                <option value="other">Other</option>
+                            </select>
+                            <textarea
+                                className="input"
+                                name="details"
+                                placeholder="Additional Event Details"
+                                value={inputs.details}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                            />
+                            {hasError && (
+                                <div className="validation-error">
+                                    <h3>{requiredFieldError}</h3>
+                                </div>
+                            )}
+                            {formSubmitError && (
+                                <div style={{ padding: '2rem' }}>
+                                    <h3
+                                        style={{
+                                            color: 'red',
+                                            textAlign: 'center',
+                                        }}
+                                    >
+                                        An error has occurred submitting your
+                                        request. Please email
+                                        djbentleytaylor@gmail.com with your
+                                        request information.
+                                    </h3>
+                                </div>
+                            )}
+                            <button
+                                type="submit"
+                                className="btn"
+                                disabled={isDisabled}
+                            >
+                                Submit
+                            </button>
+                        </form>
                     </div>
                     <FormModal
                         show={showModal}
