@@ -20,7 +20,6 @@ import photo7 from '../assets/peppernix2.jpg';
 import photo8 from '../assets/peppernix3.jpg';
 import photo9 from '../assets/IMG_62712.jpeg';
 import photo10 from '../assets/Moet-Hennessy-3-11-9145.jpg';
-import photo11 from '../assets/F7B2E57D-BE4F-45B2-9DD0-EF98A062A8A8.jpeg';
 import photo12 from '../assets/6651b825-cbd4-4a39-8e59-9c1bdeeac1f9~sc_513.770.webp';
 import photo13 from '../assets/PhotoFeb01_2.jpg';
 import photo14 from '../assets/Screenshot2023.png';
@@ -104,7 +103,7 @@ export default function Gallery() {
         photo6,
         photo8,
         photo9,
-        photo11,
+
         photo13,
         photo16,
         photo17,
@@ -165,7 +164,7 @@ export default function Gallery() {
         accessibility: true,
         swipe: true,
         swipeToSlide: true,
-        touchThreshold: 10, 
+        touchThreshold: 10,
         waitForAnimate: false,
     };
 
