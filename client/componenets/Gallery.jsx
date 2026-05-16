@@ -128,17 +128,17 @@ export default function Gallery() {
         window.scrollTo(0, 0);
     }, []);
 
-const handlePhotoClick = (index) => {
-    setSelectedPhotoIndex(index);
-    setShowCarousel(true);        
-    document.body.classList.add('modal-open');
-};
+    const handlePhotoClick = (index) => {
+        setSelectedPhotoIndex(index);
+        setShowCarousel(true);
+        document.body.classList.add('modal-open');
+    };
 
-const closeCarousel = () => {
-    setShowCarousel(false);        
-    setSelectedPhotoIndex(null);
-    document.body.classList.remove('modal-open');
-};
+    const closeCarousel = () => {
+        setShowCarousel(false);
+        setSelectedPhotoIndex(null);
+        document.body.classList.remove('modal-open');
+    };
 
     const CustomPrevArrow = ({ onClick }) => (
         <div className="custom-prev" onClick={onClick}>
@@ -163,50 +163,54 @@ const closeCarousel = () => {
         nextArrow: <CustomNextArrow />,
         fade: true,
         accessibility: true,
+        swipe: true,
+        swipeToSlide: true,
+        touchThreshold: 10, 
+        waitForAnimate: false,
     };
 
     return (
-    <>
-        <div className="galleryNavbar">
-            <nav className="galleryNav">
-                <img src={Navbarlogo} className="logo" />
-                <div className="galleryNavItems">
-                    <Link className="galleryLink" to="/">
-                        Back To Main Page
-                    </Link>
-                </div>
-            </nav>
-        </div>
-
-        <div className="Gallery-Images">
-            {photosArr.map((str, index) => (
-                <Photo
-                    className="squarePhoto"
-                    key={str}
-                    url={str}
-                    handleClick={() => handlePhotoClick(index)}
-                />
-            ))}
-        </div>
-
-        {showCarousel && (
-            <div className="lightbox-overlay">
-                <button className="lightbox-close" onClick={closeCarousel}>
-                    &#x2715;
-                </button>
-                <div className="lightbox-inner">
-                    <Slider {...settings}>
-                        {photosArr.map((str, index) => (
-                            <Photo
-                                className="carouselPhoto"
-                                key={index}
-                                url={str}
-                            />
-                        ))}
-                    </Slider>
-                </div>
+        <>
+            <div className="galleryNavbar">
+                <nav className="galleryNav">
+                    <img src={Navbarlogo} className="logo" />
+                    <div className="galleryNavItems">
+                        <Link className="galleryLink" to="/">
+                            Back To Main Page
+                        </Link>
+                    </div>
+                </nav>
             </div>
-        )}
-    </>
-);
+
+            <div className="Gallery-Images">
+                {photosArr.map((str, index) => (
+                    <Photo
+                        className="squarePhoto"
+                        key={str}
+                        url={str}
+                        handleClick={() => handlePhotoClick(index)}
+                    />
+                ))}
+            </div>
+
+            {showCarousel && (
+                <div className="lightbox-overlay">
+                    <button className="lightbox-close" onClick={closeCarousel}>
+                        &#x2715;
+                    </button>
+                    <div className="lightbox-inner">
+                        <Slider {...settings}>
+                            {photosArr.map((str, index) => (
+                                <Photo
+                                    className="carouselPhoto"
+                                    key={index}
+                                    url={str}
+                                />
+                            ))}
+                        </Slider>
+                    </div>
+                </div>
+            )}
+        </>
+    );
 }
