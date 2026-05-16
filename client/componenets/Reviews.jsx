@@ -96,6 +96,15 @@ function Reviews() {
             <h2 className="reviews-recent-reviews-header">Recent Reviews</h2>
 
             <div className="reviews-scroll-wrapper">
+                  <div className="reviews-dots">
+                    {reviewsData.map((_, i) => (
+                        <span
+                            key={i}
+                            className={`reviews-dot ${i === activeIndex ? 'active' : ''}`}
+                            onClick={() => handleDotClick(i)}
+                        />
+                    ))}
+                </div>
                 <div
                     className="reviews-card-grid"
                     onScroll={handleScroll}
@@ -109,15 +118,7 @@ function Reviews() {
                     ))}
                 </div>
 
-                <div className="reviews-dots">
-                    {reviewsData.map((_, i) => (
-                        <span
-                            key={i}
-                            className={`reviews-dot ${i === activeIndex ? 'active' : ''}`}
-                            onClick={() => handleDotClick(i)}
-                        />
-                    ))}
-                </div>
+              
             </div>
 
             <button className="reviewsBtn" onClick={navigateToTheKnotReviews}>
