@@ -602,7 +602,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    max-width: 900px; /* bring this down from 900px */
+    max-width: 900px;
     width: 100%;
     margin: 0 auto 2rem auto;
     padding: 0 1.5rem;
@@ -948,32 +948,103 @@ body.modal-open {
 }
 
 .Gallery-Images {
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    padding: 6px;
+    background-color: #1a1a1a;
+    min-height: calc(100vh - 70px);
 }
 
 .squarePhoto {
-    display: inline-block;
-    height: 24vw;
-    width: 24vw;
-    border: solid 1px #56575c;
-    margin: 5px;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-     cursor: pointer; 
+    cursor: pointer;
+    border: none;           /* remove old border */
+    margin: 0;
+    transition: opacity 0.2s ease, transform 0.25s ease;
 }
+
+.squarePhoto:hover {
+    opacity: 0.85;
+    transform: scale(1.02);
+}
+
+/* ── Lightbox Overlay ── */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;                               /* top/right/bottom/left: 0 */
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(4px);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     padding: 0 70px;  
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 1.1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 210;
+    transition: background 0.2s ease;
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.lightbox-inner {
+    width: 85vw;
+    max-width: 1100px;
+    position: relative;
+       overflow: visible;  
+}
+
 
 .carouselContainer {
     position: fixed;
-    top: 60%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -55%);
-    max-width: 80vw;
+    transform: translate(-50%, -50%);
+    max-width: 90vw;
+    width: 90vw;
+    z-index: 200;
 }
 
 .carouselPhoto {
-    max-width: 75vw;
-    max-height: 75vh;
-    background-size: cover;
-    display: flex;
+    max-width: 85vw;
+    max-height: 78vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.carouselContainer .slick-slider,
+.carouselContainer .slick-list,
+.carouselContainer .slick-track {
+    height: 80vh;
+}
+
+.carouselContainer .slick-slide > div {
+    height: 100%;
+    display: flex !important;
     align-items: center;
     justify-content: center;
 }
@@ -991,6 +1062,44 @@ body.modal-open {
     justify-content: center;
     width: max-content;
 }
+
+.custom-prev,
+.custom-next {
+    position: fixed;        /* change from absolute to fixed */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 210;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.custom-prev { left: 20px; }   /* fixed distance from viewport edge */
+.custom-next { right: 20px; }
+
+.custom-prev:hover,
+.custom-next:hover {
+    background: rgba(255, 255, 255, 0.28);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.galleryNavbar {
+    background-color: #1a1a1a;
+}
+
+.galleryLink {
+    color: #d3d3d3;
+}
+
 
 /* ===================== MEDIA QUERIES ===================== */
 
@@ -1317,6 +1426,10 @@ body.modal-open {
     /* Gallery */
     .galleryImage {
         height: 300px;
+    }
+
+     .Gallery-Images {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .galleryImage > img {
@@ -1654,7 +1767,75 @@ body.modal-open {
         transform: translate(-50%, -50%);
     }
 
-    /* Carousel */
+    /* Mix Carousel */
+
+    /* Image Carousel */
+
+        .carouselContainer {
+        max-width: 100vw;
+        width: 100vw;
+        top: 50%;
+    }
+
+    .carouselContainer .slick-slider,
+    .carouselContainer .slick-list,
+    .carouselContainer .slick-track {
+        height: 70vh;
+    }
+
+    .carouselPhoto {
+        max-width: 92vw;
+        max-height: 68vh;
+    }
+
+    /* On mobile, arrows sit inside the image area */
+  .custom-prev,
+    .custom-next {
+        z-index: 9999;
+        left: 8px;
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.25);  /* slightly more visible */
+    }
+
+    .custom-next {
+        left: auto;
+        right: 8px;
+    }
+
+      .Gallery-Images {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
+        padding: 4px;
+    }
+
+      .lightbox-inner {
+        width: 100vw;
+    }
+
+    .lightbox-inner .slick-slider,
+    .lightbox-inner .slick-list,
+    .lightbox-inner .slick-track {
+        height: 70vh;
+    }
+
+    .lightbox-inner .slick-slider,
+.lightbox-inner .slick-list {
+    overflow: visible;
+}
+
+    .carouselPhoto {
+        max-width: 98vw;
+        max-height: 68vh;
+    }
+
+.custom-prev { left: -70px; }
+.custom-next { right: -70px; }
+
+    .lightbox-close {
+        top: 0.75rem;
+        right: 0.75rem;
+    }
     .mix-box > div {
         width: 50vw;
         position: relative;

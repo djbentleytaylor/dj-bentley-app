@@ -1,13 +1,13 @@
-import React from "react";
-
-export default function Photo(props) {
+/* eslint-disable react/prop-types */
+const Photo = ({ url, className, handleClick }) => {
     return (
-
         <img
-            className={props.className}
-            src={props.url}
-            onClick={props.handleClick}
-        ></img>
+            className={className}
+            src={url}
+            onClick={handleClick}
+            loading="lazy"    // add this
+        />
+    );
+};
 
-    )
-}
+export default Photo;

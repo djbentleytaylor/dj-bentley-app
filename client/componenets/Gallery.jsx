@@ -128,19 +128,17 @@ export default function Gallery() {
         window.scrollTo(0, 0);
     }, []);
 
-    const handlePhotoClick = async (index) => {
-        await setSelectedPhotoIndex(index);
-        setShowCarousel((prevShow) => !prevShow);
-          document.body.classList.add('modal-open');
-    };
+const handlePhotoClick = (index) => {
+    setSelectedPhotoIndex(index);
+    setShowCarousel(true);          // set directly, not toggle
+    document.body.classList.add('modal-open');
+};
 
-    const closeCarousel = () => {
-        // setShowCarousel(false)
-             setShowCarousel((prevShow) => !prevShow);
-        setSelectedPhotoIndex(null);
-         document.body.classList.remove('modal-open')
-        // console.log('carousel closed');
-    };
+const closeCarousel = () => {
+    setShowCarousel(false);         // set directly, not toggle
+    setSelectedPhotoIndex(null);
+    document.body.classList.remove('modal-open');
+};
 
     const CustomPrevArrow = ({ onClick }) => (
         <div className="custom-prev" onClick={onClick}>
@@ -168,43 +166,36 @@ export default function Gallery() {
     };
 
     return (
-        <>
-            <div className="galleryNavbar">
-                <nav className="galleryNav">
-                    <img src={Navbarlogo} className="logo" />
-                    <div className="galleryNavItems">
-                        <Link className="galleryLink" to="/">
-                            Back To Main Page
-                        </Link>
-                    </div>
-                </nav>
-            </div>
-            <div className="Gallery-Images">
-                {photosArr.map((str, index) => (
-                    <Photo
-                        className="squarePhoto"
-                        key={str}
-                        url={str}
-                        handleClick={() => handlePhotoClick(index)}
-                    />
-                ))}
-            </div>
-            {showCarousel && (
-                <ClickOutside
-                    onClick={closeCarousel}
-                    className="carouselContainer"
-                >
-                    <Slider
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            maxWidth: '80vw',
-                            backgroundColor: 'rgba(240, 239, 238, 0.90)',
-                            padding: '5vh 0 5vh 0',
-                        }}
-                        {...settings}
-                    >
+    <>
+        <div className="galleryNavbar">
+            <nav className="galleryNav">
+                <img src={Navbarlogo} className="logo" />
+                <div className="galleryNavItems">
+                    <Link className="galleryLink" to="/">
+                        Back To Main Page
+                    </Link>
+                </div>
+            </nav>
+        </div>
+
+        <div className="Gallery-Images">
+            {photosArr.map((str, index) => (
+                <Photo
+                    className="squarePhoto"
+                    key={str}
+                    url={str}
+                    handleClick={() => handlePhotoClick(index)}
+                />
+            ))}
+        </div>
+
+        {showCarousel && (
+            <div className="lightbox-overlay">
+                <button className="lightbox-close" onClick={closeCarousel}>
+                    &#x2715;
+                </button>
+                <div className="lightbox-inner">
+                    <Slider {...settings}>
                         {photosArr.map((str, index) => (
                             <Photo
                                 className="carouselPhoto"
@@ -213,8 +204,9 @@ export default function Gallery() {
                             />
                         ))}
                     </Slider>
-                </ClickOutside>
-            )}
-        </>
-    );
+                </div>
+            </div>
+        )}
+    </>
+);
 }
