@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Photo from './Photo';
 import Slider from 'react-slick';
@@ -9,7 +10,6 @@ import {
     faChevronLeft,
     faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
-import ClickOutside from './ClickOutside';
 import photo1 from '../assets/firstPhoto.png';
 import photo2 from '../assets/DBBA205D-BC33-4022-AC5D-45AE80FC6BC6.jpeg';
 import photo3 from '../assets/_peppernix2221-3592.jpg';
@@ -130,12 +130,12 @@ export default function Gallery() {
 
 const handlePhotoClick = (index) => {
     setSelectedPhotoIndex(index);
-    setShowCarousel(true);          // set directly, not toggle
+    setShowCarousel(true);        
     document.body.classList.add('modal-open');
 };
 
 const closeCarousel = () => {
-    setShowCarousel(false);         // set directly, not toggle
+    setShowCarousel(false);        
     setSelectedPhotoIndex(null);
     document.body.classList.remove('modal-open');
 };

@@ -30,7 +30,7 @@ const MixPlayer = () => {
                 }));
 
                 setMixes(mixTiles);
-                // console.log(mixTiles);
+               
             } catch (error) {
                 console.error("Error fetching Mixcloud data:", error);
             }
@@ -113,7 +113,7 @@ const MixPlayer = () => {
                 </Slider>
                 <iframe
                     id={"my-widget-iframe"}
-                    onClick={() => handleMixClick(index)}
+                    // onClick={() => handleMixClick(index)}
                     sandbox="allow-same-origin allow-scripts "
                     width="100%"
                     height="30"

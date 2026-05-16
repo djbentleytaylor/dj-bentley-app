@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import FormModal from './FormModal';
 import DatePicker from 'react-datepicker';
 import bookingPhoto from '../assets/bookingPhoto2.png';
+
 
 const BookingForm = () => {
     const [inputs, setInputs] = useState({
@@ -37,10 +38,6 @@ const BookingForm = () => {
     );
     const [showModal, setShowModal] = useState(false);
     const [formSubmitError, setFormSubmitError] = useState(false);
-
-    useEffect(() => {
-        console.log('showModal updated:', showModal);
-    }, [showModal]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -84,13 +81,13 @@ const BookingForm = () => {
 
     function sendEmail(e) {
         e.preventDefault();
-
+     
         emailjs
             .sendForm(
-                'service_dpcvvfo',
-                'template_cnpcy9m',
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 e.target,
-                '0FMSFkE2DIZ5zpkCX',
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
             )
             .then(
                 (result) => {
