@@ -1561,18 +1561,34 @@ body.modal-open {
         display: none;
     }
 
-    .carousel {
+     .carousel {
         width: 100%;
         left: 0;
         transform: none;
-        overflow: hidden;
+        padding: 0;
     }
 
-    .musicPlayer {
+  .musicPlayer {
         width: 100%;
         left: 0;
         transform: none;
         margin: 0 auto;
+        padding: 0 0 2rem 0;    /* add bottom padding */
+    }
+
+      .musicPlayer > h1 {
+        padding: 1.5rem 0 1rem 0;   /* reduce top padding */
+    }
+
+      .musicPlayer .slick-dots {
+        position: relative;
+        bottom: 0;
+        margin-top: 1rem;
+    }
+
+    .musicPlayer .slick-dots li button:before {
+        font-size: 8px;
+        color: #56575c;
     }
 
     .slick-slider {
@@ -1836,17 +1852,16 @@ body.modal-open {
         top: 0.75rem;
         right: 0.75rem;
     }
-    .mix-box > div {
-        width: 50vw;
-        position: relative;
+  .mix-box > div {
+        width: 60vw;        
         left: 50%;
         transform: translateX(-50%);
     }
 
-    .mix-box > div > img {
-        border-radius: 10px;
-        width: 50vw;
+   .mix-box > div > img {
+        width: 60vw;
         height: auto;
+        border-radius: 10px;
     }
 
     /* Footer */

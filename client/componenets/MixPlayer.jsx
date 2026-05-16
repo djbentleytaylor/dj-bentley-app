@@ -112,7 +112,7 @@ const MixPlayer = () => {
                     ))}
                 </Slider>
                 <iframe
-                    id={`my-widget-iframe`}
+                    id={"my-widget-iframe"}
                     onClick={() => handleMixClick(index)}
                     sandbox="allow-same-origin allow-scripts "
                     width="100%"
@@ -124,10 +124,10 @@ const MixPlayer = () => {
                     frameBorder="0"
                     style={{
                         display: "block",
-                        width: "96%",
+                        width: "100%",  
                         height: "100%",
                         margin: "auto",
-                        padding: "40px",
+                    padding: "0",   
                     }}
                     
                 ></iframe>
