@@ -30,7 +30,7 @@ import photo18 from '../assets/Bentley-Headshots-2024-27.jpg';
 import photo19 from '../assets/landscapeHeadshot.jpg';
 import photo20 from '../assets/Copy of IMG_1972.jpeg';
 import photo21 from '../assets/lights2.jpg';
-import photo22 from '../assets/moet.jpg';
+import photo22 from '../assets/replace.jpg';
 import photo23 from '../assets/parkCityStage.jpg';
 import photo24 from '../assets/D61A1964.jpg';
 import photo25 from '../assets/snow.jpg';
@@ -61,6 +61,7 @@ import photo49 from '../assets/nik1948.jpg';
 import photo50 from '../assets/ss511803.png';
 import photo51 from '../assets/ss5111019.png';
 import photo52 from '../assets/ss05111019.png';
+import photo53 from '../assets/addphoto.jpeg'
 
 import Navbarlogo from '../assets/NewLogo.png';
 
@@ -118,6 +119,7 @@ export default function Gallery() {
         photo44,
         photo50,
         photo52,
+        photo53
     ];
     //
     const [showCarousel, setShowCarousel] = useState(false);
