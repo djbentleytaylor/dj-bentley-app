@@ -2,7 +2,7 @@ import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import FormModal from './FormModal';
 import DatePicker from 'react-datepicker';
-import bookingPhoto from '../assets/bookingPhoto2.png';
+// import bookingPhoto from '../assets/bookingPhoto2.png';
 
 
 const BookingForm = () => {
@@ -115,7 +115,9 @@ const BookingForm = () => {
 
     return (
         <div className="bookingLayout">
-            <img src={bookingPhoto} className="bookingImage" />
+            <div className="bookingImage"></div>
+
+            {/* <img src={bookingPhoto} className="bookingImage" /> */}
             <div className="bookingRight">
                 <h1 className="bookH1">Inquire</h1>
                 <div className="bookingFormWrapper">

@@ -132,20 +132,24 @@ body {
     flex-direction: row-reverse;
     align-items: stretch;
     background-color: #d3d3d3;
-    padding-top: 2rem;
+    padding: 2rem;
     max-height: none;
     padding-right: 2rem;
+    gap: 2rem;
     width: 100vw;
     border-radius: 8px;
+        min-height: 500px; /* adjust to taste */
+
 }
 
 .aboutImage {
     flex-shrink: 0;
     width: 40vw;
     overflow: hidden;
-    margin-bottom: 3vh; /* remove margin-bottom: 2vh */
-    margin-top: 1.5rem;
     border-radius: 10px;
+    background-image: url('../assets/dj-photo.png');
+    background-size: cover;
+    background-position: center top;
     align-self: stretch;
 }
 
@@ -164,8 +168,10 @@ body {
 
 .aboutBio {
     background-color: #e8e8e8;
+       min-height: 800px; /* adjust to taste */
+
     border-radius: 8px;
-    padding: 1.5rem 2rem;
+padding: 3rem 3rem;
     font-size: 0.875rem;
     line-height: 1.7;
     width: 100%;
@@ -199,7 +205,6 @@ body {
 
 .aboutContent {
     flex: 1;
-    padding: 1.5rem;
     display: flex;
     align-items: center;
 }
@@ -307,7 +312,7 @@ body {
 .bookingLayout {
     display: flex;
     flex-direction: row;
-    align-items: flex-start; /* was: stretch — this was breaking sticky in FF/Safari */
+    align-items: stretch;
     background-color: #d3d3d3;
     width: 100%;
     gap: 2rem;
@@ -326,12 +331,11 @@ body {
     width: 40vw;
     min-width: 300px;
     flex-shrink: 0;
-    object-fit: cover;
     border-radius: 8px;
-    max-height: 85vh;
-    min-height: 400px;
-    align-self: flex-start;
-    top: 80px;
+    background-image: url('../assets/bookingPhoto2.png');
+    background-size: cover;
+    background-position: center;
+    align-self: stretch;
 }
 
 .name-input {
@@ -526,16 +530,14 @@ body {
     color: #56575c;
     background-color: #e8e8e8;
     border-radius: 1rem;
-    width: 90vw;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 3rem 5rem 3rem 5rem;
-    margin-top: 2rem;
+    width: calc(100% - 4rem);
+    margin: 2rem auto;
+    padding: 3rem 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .badgeContainer {

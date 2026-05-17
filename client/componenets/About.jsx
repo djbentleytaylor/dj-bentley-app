@@ -20,7 +20,7 @@ const About = () => {
     return (
         <div className="aboutPage">
             <div className="aboutImage">
-                <img className="bioImage" src={bioPhoto} />
+                {/* <img className="bioImage" src={bioPhoto} /> */}
             </div>
             <div className="aboutContent">
             
