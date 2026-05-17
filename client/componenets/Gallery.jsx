@@ -121,7 +121,7 @@ export default function Gallery() {
         photo52,
         photo53
     ];
-    //
+    
     const [showCarousel, setShowCarousel] = useState(false);
     const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(null);
 
