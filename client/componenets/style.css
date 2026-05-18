@@ -1899,17 +1899,45 @@ body.modal-open {
         transform: scale(1.25);
     }
 
-    .reviews-recent-reviews {
-        min-width: 80vw; /* each card takes most of the screen */
-        flex-shrink: 0; /* prevents cards from squishing */
-        scroll-snap-align: start; /* snaps to each card */
+     .reviews-recent-reviews {
+        min-width: 80vw;
+        flex-shrink: 0;
+        scroll-snap-align: start;
         box-sizing: border-box;
+        height: 400px;              /* fixed height — all cards same size */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
-    .reviews-recent-reviews > p {
-        font-size: 0.85rem;
-        text-align: left;
-        word-break: break-word;
+      .reviews-recent-reviews > p:first-child {
+        overflow-y: auto;           /* scrollable text */
+        flex: 1;                    /* takes up remaining space above attribution */
+        margin-bottom: 0.5rem;
+        padding-right: 4px;         /* small gap so text doesn't sit against scrollbar */
+        /* show a subtle scrollbar so user knows it's scrollable */
+        scrollbar-width: thin;
+        scrollbar-color: #67bed9 transparent;
+    }
+
+    .reviews-recent-reviews > p:first-child::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .reviews-recent-reviews > p:first-child::-webkit-scrollbar-thumb {
+        background-color: #67bed9;
+        border-radius: 4px;
+    }
+
+    .reviews-recent-reviews > p:first-child::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+       .reviews-attribution {
+        flex-shrink: 0;             /* attribution always visible at bottom */
+        margin-top: 0;
+        padding-top: 0.5rem;
+        border-top: 1px solid #e0e0e0;  /* subtle divider above name */
     }
 
     .reviews-awards-container {

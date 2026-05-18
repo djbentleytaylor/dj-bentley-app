@@ -139,7 +139,7 @@ export default function Navbar() {
                                     setToggle((prevToggle) => !prevToggle)
                                 }
                             >
-                                Bio
+                                About
                             </Link>
                             <Link
                                 activeClass="active"
@@ -153,7 +153,7 @@ export default function Navbar() {
                                     setToggle((prevToggle) => !prevToggle)
                                 }
                             >
-                                Contact
+                                Inquire
                             </Link>
                             <Link
                                 activeClass="active"

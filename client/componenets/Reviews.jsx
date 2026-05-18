@@ -6,10 +6,11 @@ import BOW2026 from '../assets/2026BOW.png';
 import BOW25 from '../assets/BOW25.png';
 
 const reviewsData = [
+   
     {
         id: 1,
-        text: `Quite frankly, we can't say enough good things about Bentley and the way he and his team showed up and performed at our wedding. He was exceptionally kind, helpful and accommodating and the music was next level. Good music was of high importance to us at the celebration and Bentley far exceeded our expectations and more guests than I can count have reached out to express how unbelievably good the DJ was! I would recommend his services to anyone.`,
-        attribution: '— Paul J.',
+        text: `We cannot recommend DJ Bentley highly enough!! From the very first conversation, he was professional, attentive, and genuinely invested in making our wedding day unforgettable. He took the time to understand our style, music preferences, and the vibe we wanted, and then executed it flawlessly. The dance floor was packed from start to finish...our guests are still raving about how much fun they had! He read the room perfectly, kept the energy high, and seamlessly mixed songs across genres so everyone, from our youngest friends to our grandparents, felt included. To top it off, Bentley even stayed for our impromptu after party and kept the energy going all night. His dedication and passion truly went above and beyond, making the entire experience one we'll never forget!`,
+        attribution: '— Kylie K.',
     },
     {
         id: 2,
@@ -18,8 +19,8 @@ const reviewsData = [
     },
     {
         id: 3,
-        text: `We cannot recommend DJ Bentley highly enough!! From the very first conversation, he was professional, attentive, and genuinely invested in making our wedding day unforgettable. He took the time to understand our style, music preferences, and the vibe we wanted, and then executed it flawlessly. The dance floor was packed from start to finish...our guests are still raving about how much fun they had! He read the room perfectly, kept the energy high, and seamlessly mixed songs across genres so everyone, from our youngest friends to our grandparents, felt included. To top it off, Bentley even stayed for our impromptu after party and kept the energy going all night. His dedication and passion truly went above and beyond, making the entire experience one we'll never forget!`,
-        attribution: '— Kylie K.',
+        text: `Quite frankly, we can't say enough good things about Bentley and the way he and his team showed up and performed at our wedding. He was exceptionally kind, helpful and accommodating and the music was next level. Good music was of high importance to us at the celebration and Bentley far exceeded our expectations and more guests than I can count have reached out to express how unbelievably good the DJ was! I would recommend his services to anyone.`,
+        attribution: '— Paul J.',
     },
 ];
 
