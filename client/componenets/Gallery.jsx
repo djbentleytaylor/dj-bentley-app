@@ -19,17 +19,15 @@ export default function Gallery() {
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        fetch('https://res.cloudinary.com/dh3jh2qv6/image/list/gallery.json')
-    .then(res => res.json())
+        fetch('https://res.cloudinary.com/dptm7uamd/image/list/gallery.json')
+   .then(res => res.json())
     .then(data => {
-        const sorted = data.resources.sort((a, b) => {
-            const aOrder = parseInt(a.context?.custom?.sort_order || 999);
-            const bOrder = parseInt(b.context?.custom?.sort_order || 999);
-            return aOrder - bOrder;
-        });
+        const sorted = data.resources.sort((a, b) =>
+            new Date(b.created_at) - new Date(a.created_at)
+        );
 
         const urls = sorted.map(resource =>
-            `https://res.cloudinary.com/dh3jh2qv6/image/upload/${resource.public_id}`
+            `https://res.cloudinary.com/dptm7uamd/image/upload/${resource.public_id}`
         );
         setPhotos(urls);
     })
