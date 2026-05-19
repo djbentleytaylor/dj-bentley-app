@@ -19,28 +19,29 @@ export default function Gallery() {
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        fetch('https://res.cloudinary.com/dptm7uamd/image/list/gallery.json')
-            .then((res) => res.json())
-            .then((data) => {
-                const sorted = data.resources.sort(
-                    (a, b) => new Date(b.created_at) - new Date(a.created_at),
-                );
+  fetch('https://res.cloudinary.com/dptm7uamd/image/list/gallery.json')
+    .then((res) => res.json())
+    .then((data) => {
+        const sorted = data.resources.sort(
+            (a, b) => new Date(b.created_at) - new Date(a.created_at),
+        );
 
-                // Swap last two
-                const last = sorted.length - 1;
-                const secondLast = sorted.length - 2;
-                [sorted[last], sorted[secondLast]] = [
-                    sorted[secondLast],
-                    sorted[last],
-                ];
+        // Swap last two
+        const last = sorted.length - 1;
+        const secondLast = sorted.length - 2;
+        [sorted[last], sorted[secondLast]] = [
+            sorted[secondLast],
+            sorted[last],
+        ];
 
-                const urls = sorted.map(
-                    (resource) =>
-                        `https://res.cloudinary.com/dptm7uamd/image/upload/${resource.public_id}`,
-                );
-                setPhotos(urls);
-            })
-            .catch((err) => console.error('Error fetching gallery:', err));
+        const urls = sorted.map((resource) => {
+            const transform = resource.public_id === 'Copy_of_IMG_1972_b6k39r' ? 'a_90/' : '';
+            return `https://res.cloudinary.com/dptm7uamd/image/upload/${transform}${resource.public_id}`;
+        });
+
+        setPhotos(urls);
+    })
+    .catch((err) => console.error('Error fetching gallery:', err));
     }, []);
 
     const handlePhotoClick = (index) => {
